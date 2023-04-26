@@ -5,9 +5,10 @@ DarkRadiant Map Information File Version 2
 	}
 	MapProperties
 	{
-		KeyValue { "EditTimeInSeconds" "3070" } 
-		KeyValue { "LastCameraAngle" "-4.76837e-07 271.908 0" } 
-		KeyValue { "LastCameraPosition" "5030.8 -1638.48 -1195.94" } 
+		KeyValue { "EditTimeInSeconds" "4599" } 
+		KeyValue { "LastCameraAngle" "-5.4 90.2999 0" } 
+		KeyValue { "LastCameraPosition" "5051.72 -1962.55 -1125.07" } 
+		KeyValue { "LastShaderClipboardMaterial" "textures/darkmod/paint_paper/wallpaper_ornamental_01_red" } 
 		KeyValue { "MapAngle1" "14.7001 87.8977 0" } 
 		KeyValue { "MapAngle2" "2.10002 84.5976 0" } 
 		KeyValue { "MapAngle3" "-3.29998 6.59757 0" } 
@@ -29,7 +30,7 @@ DarkRadiant Map Information File Version 2
 	}
 	MapEditTimings
 	{
-		TotalSecondsEdited { 3070 }
+		TotalSecondsEdited { 4599 }
 	}
 	SelectionGroups
 	{
@@ -1808,8 +1809,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
-		Node { 0 } // brush (Brush)
-		Node { 0 } // brush (Brush)
 		Node { 0 } // patch (Patch)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
@@ -2580,6 +2579,8 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // brush (Brush)
 		Node { 0 } // patch (Patch)
 		Node { 0 } // patch (Patch)
+		Node { 0 } // brush (Brush)
+		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
@@ -10099,9 +10100,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (func_static_1230)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
-		Node { 0 } // entity (func_static_1234)
-		Node { 0 } // brush (Brush)
-		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (func_static_1239)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
@@ -11897,5 +11895,12 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (masterbedroom_trap_on_message)
 		Node { 0 } // entity (func_static_174)
 		Node { 0 } // brush (Brush)
+		Node { 0 } // entity (func_static_953)
+		Node { 0 } // brush (Brush)
+		Node { 0 } // brush (Brush)
+		Node { 0 } // entity (info_locationSeparator_1)
+		Node { 0 } // entity (info_locationSeparator_2)
+		Node { 0 } // entity (info_locationSeparator_3)
+		Node { 0 } // entity (info_locationSeparator_4)
 	}
 }
