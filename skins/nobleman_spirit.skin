@@ -1,0 +1,31 @@
+skin nobleman/spirit
+{
+	model models/md5/chars/nobles/nobleman1/tdm_ai_nobleman.md5mesh
+	model tdm_ai_nobleman1
+
+	models/md5/chars/nobles/nobleman1/tunic models/md5/chars/nobles/nobleman/spirit_tunic
+	models/md5/nobles/nobleman1/shoulderpads models/md5/chars/nobles/nobleman/spirit_tunic
+	models/md5/nobles/nobleman1/collar1 models/md5/chars/nobles/nobleman/spirit_tunic
+	models/md5/nobles/nobleman1/legs models/md5/chars/nobles/nobleman/spirit_tunic
+	models/md5/nobles/nobleman1/belt models/md5/chars/nobles/nobleman/spirit_tunic
+	models/md5/chars/inventors/engineer2/engineer_collar/ties textures/common/nodraw
+	textures/common/shadow textures/common/nodraw
+	tdm_buckle textures/common/nodraw
+	tdm_npc_hand models/md5/chars/nobles/nobleman/spirit_hands
+}
+
+
+skin nobleman/corpse_head
+{
+	model models/md5/chars/nobles/nobleman1/tdm_ai_nobleman.md5mesh
+	model tdm_ai_nobleman1
+
+	models/md5/chars/nobles/nobleman1/tunic textures/common/nodraw
+	models/md5/nobles/nobleman1/shoulderpads textures/common/nodraw
+	models/md5/nobles/nobleman1/collar1 textures/common/nodraw
+	models/md5/nobles/nobleman1/legs textures/common/nodraw
+	models/md5/nobles/nobleman1/belt textures/common/nodraw
+	tdm_buckle textures/common/nodraw
+	tdm_npc_hand textures/common/nodraw
+}
+

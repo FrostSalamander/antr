@@ -1,0 +1,27 @@
+skin noblewoman/spirit
+{
+	model models/md5/chars/nobles/noblewoman/noblewomanmesh.md5mesh
+	model tdm_ai_noblewoman
+
+	tdm_npc_hand_female models/md5/chars/nobles/nobleman/spirit_hands
+	models/md5/chars/nobles/noblewoman/noblebottom models/md5/chars/nobles/noblewoman/noblebottom_spirit_d
+	models/md5/chars/nobles/noblewoman/noblelegs models/md5/chars/nobles/noblewoman/noblelegs_spirit
+	models/md5/chars/nobles/noblewoman/nobletop models/md5/chars/nobles/noblewoman/nobletop_spirit_d
+	models/md5/chars/nobles/noblewoman/noblehead models/md5/chars/nobles/noblewoman/nobletop_spirit_d
+	models/md5/chars/nobles/noblewoman/noblehands models/md5/chars/nobles/noblewoman/nobletop_spirit_d
+}
+
+
+
+
+skin noblewoman/corpse_head
+{
+	model models/md5/chars/nobles/noblewoman/noblewomanmesh.md5mesh
+	model tdm_ai_noblewoman
+
+	models/md5/chars/nobles/noblewoman/noblebottom textures/common/nodraw
+	models/md5/chars/nobles/noblewoman/noblelegs textures/common/nodraw
+	models/md5/chars/nobles/noblewoman/nobletop textures/common/nodraw
+	models/md5/chars/nobles/noblewoman/noblehead textures/common/nodraw
+	models/md5/chars/nobles/noblewoman/noblehands textures/common/nodraw
+}

@@ -1,0 +1,36 @@
+
+skin maid_spirit
+{
+	model tdm_ai_wench
+	model tdm_ai_female_rogue
+	model tdm_ai_wench_new
+
+	wench_skin models/md5/chars/maid/maid_skin_spirit
+	wench_arms models/md5/chars/nobles/nobleman/spirit_hands
+	wench_shoes textures/common/nodraw
+	tdm_npc_hand_female models/md5/chars/nobles/nobleman/spirit_hands
+	models/md5/chars/townsfolk/wench/wench_dress models/md5/chars/maid/maid_dress_spirit
+	models/md5/chars/nobles/noblewoman/wench_hands models/md5/chars/nobles/noblewoman/nobletop_spirit_d
+	wench_corset models/md5/chars/maid/maid_dress_spirit
+	models/md5/chars/nobles/noblewoman/noblebottom3 models/md5/chars/nobles/noblewoman/noblebottom_spirit_d
+    sleeve       models/md5/chars/maid/maid_dress_spirit
+	sleeve_frill models/md5/chars/nobles/noblewoman/nobletop_spirit_d
+	textures/common/shadow textures/common/nodraw
+
+}
+
+skin maid_corpse_head
+{
+	model tdm_ai_wench
+	model tdm_ai_female_rogue
+	model tdm_ai_wench_new
+
+	models/md5/chars/townsfolk/wench/wench_skin textures/common/nodraw
+	models/md5/chars/townsfolk/wench/wench_dress textures/common/nodraw
+	models/md5/chars/nobles/noblewoman/wench_hands textures/common/nodraw
+	models/md5/chars/townsfolk/wench/wench_bodice textures/common/nodraw
+	models/md5/chars/nobles/noblewoman/noblebottom3 textures/common/nodraw
+	sleeve_frill textures/common/nodraw
+    sleeve       textures/common/nodraw
+
+}

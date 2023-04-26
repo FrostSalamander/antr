@@ -1,0 +1,1857 @@
+textures/water_source/blood_water
+{
+ 	qer_editorimage textures/water_source/blood_water
+	discrete
+	nonsolid
+	water
+	twosided
+	translucent
+	noselfshadow
+	noshadows
+
+	diffusemap	textures/water_source/blood_water
+	{
+		blend bumpmap
+		map	textures/water_source/water_green_local
+		translate	 0.01 * sintable[time * ((( parm5 + 0.1) - (( parm5 || 0) * 0.1)) * 0.8)], 0.01 * sintable[time * (( parm5 + 0.1) - (( parm5 || 0) * 0.1))]
+		scale 0.5,0.5
+	}
+	{
+		vertexProgram heatHazeWithMask.vfp
+		// 0.1 * 0.4 => 0.04
+		vertexParm 0 time * ((( parm5 + 0.1) - (( parm5 || 0) * 0.1)) * 0.4), time * ((( parm5 + 0.1) - (( parm5 || 0) * 0.1)) * 2)
+		vertexParm 1 (( parm6 + 1.5) - (( parm6 || 0) * 1.5))
+		fragmentProgram heatHazeWithMask.vfp
+		fragmentMap 0 _currentRender
+		fragmentMap 1 textures/sfx/vp1
+		fragmentMap 2 textures/water_source/vp_water
+	}
+
+	// TDM Ambient Method Related
+	{
+		if (global5 == 1)
+		blend add
+		map				textures/water_source/blood_water
+		scale			1, 1
+		red				global2
+		green			global3
+		blue			global4
+	}
+	{
+		if (global5 == 2)
+		blend add
+		program ambientEnvironment.vfp
+		vertexParm		0		1, 1, 0.5 , 0.5		// UV Scales for Diffuse and Bump
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular
+		vertexParm		2		global2, global3, global4, 1
+
+		fragmentMap		0		cubeMap env/gen1
+		fragmentMap		1		textures/water_source/water_green_local			// Bump
+		fragmentMap		2		textures/water_source/blood_water			// Diffuse
+		fragmentMap		3		_black			// Specular
+	}
+
+
+}
+
+spirit_tunic
+{
+  qer_editorimage    models/md5/chars/nobles/nobleman1/tunic_green_ed
+  nonsolid
+  noshadows
+
+       {blend diffusemap
+       map models/md5/chars/nobles/nobleman/spirit_tunic
+      alphatest 0.5
+       }
+transluscent
+  //     bumpmap  addnormals(models/md5/chars/nobles/nobleman1/tunic_local, heightmap(models/md5/chars/nobles/nobleman1/tunic_h.tga, 2 ) )
+        {
+      if ( parm11 > 0 )
+      blend       gl_dst_color, gl_one
+      map         _white
+      rgb         0.40 * parm11
+  }
+  {
+      if ( parm11 > 0 )
+      blend       add
+      map         models/md5/chars/nobles/tunic_green
+      rgb         0.15 * parm11
+  }
+  }
+
+
+textures/grand_piano/grand_piano_wood
+{
+ 	wood
+
+    qer_editorimage textures/grand_piano/grand_piano_wood_ed
+    diffusemap      textures/grand_piano/grand_piano_wood
+    bumpmap         textures/grand_piano/grand_piano_wood_local
+    specularmap     textures/grand_piano/grand_piano_wood_s
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/grand_piano/grand_piano_wood
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/grand_piano/grand_piano_wood		
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		textures/grand_piano/grand_piano_wood_local			// Bump				
+		fragmentMap		2		textures/grand_piano/grand_piano_wood			// Diffuse			
+		fragmentMap		3		textures/grand_piano/grand_piano_wood_s			// Specular			
+	}
+
+
+}
+
+
+
+textures/grand_piano/grand_piano_key_black
+{
+ 	wood
+
+    qer_editorimage textures/grand_piano/grand_piano_key_black_ed
+    diffusemap      textures/grand_piano/grand_piano_key_black
+    specularmap     textures/grand_piano/grand_piano_key_black_s
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/grand_piano/grand_piano_key_black
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/grand_piano/grand_piano_key_black	
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/grand_piano/grand_piano_key_black			// Diffuse			
+		fragmentMap		3		textures/grand_piano/grand_piano_key_black_s			// Specular			
+	}
+
+
+}
+
+
+
+textures/grand_piano/grand_piano_key_white
+{
+ 	wood
+
+    qer_editorimage textures/grand_piano/grand_piano_key_white_ed
+    diffusemap      textures/grand_piano/grand_piano_key_white
+    specularmap     textures/grand_piano/grand_piano_key_white_s
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/grand_piano/grand_piano_key_white
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/grand_piano/grand_piano_key_white	
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/grand_piano/grand_piano_key_white			// Diffuse			
+		fragmentMap		3		textures/grand_piano/grand_piano_key_white_s			// Specular			
+	}
+
+
+}
+
+
+
+textures/grand_piano/grand_piano_strings
+{
+   qer_editorimage   textures/grand_piano/grand_piano_strings_ed
+   DECAL_MACRO
+   noShadows
+   noimpact
+   nonsolid
+
+   {
+      blend blend
+      map	textures/grand_piano/grand_piano_strings
+   }
+}
+
+
+
+
+
+textures/window/roundtop_diamond_pattern_bright
+{
+ 	glass
+	noselfshadow
+	noshadows
+
+	qer_editorimage	textures/window/roundtop_diamond_pattern_bright_ed
+	diffusemap	textures/window/roundtop_diamond_pattern_bright
+	specularmap	textures/darkmod/window/roundtop_diamond_pattern01_s
+	bumpmap		textures/darkmod/window/roundtop_diamond_pattern01_local
+	{
+		blend	add
+		map		textures/window/roundtop_diamond_pattern_bright
+		rgb		.25
+	}
+	{
+		if ( parm11 > 0 )
+		blend	gl_dst_color, gl_one
+		map		_white
+		rgb		0.40 * parm11
+	}
+	{
+		if ( parm11 > 0 )
+		blend	add
+		map		textures/window/roundtop_diamond_pattern_bright
+		rgb		0.15 * parm11
+	}
+
+	// TDM Ambient Method Related
+	{
+		if (global5 == 1)
+		blend add
+		map				textures/window/roundtop_diamond_pattern_bright
+		scale			1, 1
+		red				global2
+		green			global3
+		blue			global4
+	}
+	{
+		if (global5 == 2)
+		blend add
+		program	ambientEnvironment.vfp
+		vertexParm		0		1, 1, 1, 1	// UV Scales for Diffuse and Bump
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular
+		vertexParm		2		global2, global3, global4, 1
+
+		fragmentMap		0		cubeMap env/gen1
+		fragmentMap		1		textures/darkmod/window/roundtop_diamond_pattern01_local			// Bump
+		fragmentMap		2		textures/window/roundtop_diamond_pattern_bright			// Diffuse
+		fragmentMap		3		textures/darkmod/window/roundtop_diamond_pattern01_s			// Specular
+	}
+
+
+}
+
+
+
+textures/window/roundtop_diamond_pattern_moonshine
+{
+ 	glass
+	noselfshadow
+	noshadows
+
+	qer_editorimage	textures/window/roundtop_diamond_pattern_moonshine_ed
+	diffusemap	textures/window/roundtop_diamond_pattern_moonshine
+	specularmap	textures/darkmod/window/roundtop_diamond_pattern01_s
+	bumpmap		textures/darkmod/window/roundtop_diamond_pattern01_local
+	{
+		blend	add
+		map		textures/window/roundtop_diamond_pattern_moonshine
+		rgb		.25
+	}
+	{
+		if ( parm11 > 0 )
+		blend	gl_dst_color, gl_one
+		map		_white
+		rgb		0.40 * parm11
+	}
+	{
+		if ( parm11 > 0 )
+		blend	add
+		map		textures/window/roundtop_diamond_pattern_moonshine
+		rgb		0.15 * parm11
+	}
+
+	// TDM Ambient Method Related
+	{
+		if (global5 == 1)
+		blend add
+		map				textures/window/roundtop_diamond_pattern_moonshine
+		scale			1, 1
+		red				global2
+		green			global3
+		blue			global4
+	}
+	{
+		if (global5 == 2)
+		blend add
+		program	ambientEnvironment.vfp
+		vertexParm		0		1, 1, 1, 1	// UV Scales for Diffuse and Bump
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular
+		vertexParm		2		global2, global3, global4, 1
+
+		fragmentMap		0		cubeMap env/gen1
+		fragmentMap		1		textures/darkmod/window/roundtop_diamond_pattern01_local			// Bump
+		fragmentMap		2		textures/window/roundtop_diamond_pattern_moonshine			// Diffuse
+		fragmentMap		3		textures/darkmod/window/roundtop_diamond_pattern01_s			// Specular
+	}
+
+
+}
+
+
+
+
+// WINDOW LIGHTS
+
+lights/window_pointedtop_light
+
+{	
+	{
+		forceHighQuality
+		map	textures/lights/window_pointedtop_light
+		colored
+		zeroClamp
+	}
+}
+
+lights/window_roundtop_diamond_pattern_light
+
+{	
+	{
+		forceHighQuality
+		map	textures/lights/window_roundtop_diamond_pattern_light
+		colored
+		zeroClamp
+	}
+}
+
+
+old_chair_white
+{
+	qer_editorimage	models/darkmod/props/textures/dchair3_ed
+	wood
+
+	diffusemap	models/md5/chairs/white_old_d
+	bumpmap		models/darkmod/props/textures/dchair2_local
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/chairs/white_old_d
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/chairs/white_old_d	
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		models/darkmod/props/textures/dchair2_local			// Bump				
+		fragmentMap		2		models/md5/chairs/white_old_d			// Diffuse			
+		fragmentMap		3		_black			// Specular			
+	}
+}
+
+old_candle_holder
+
+{
+ 	qer_editorimage	models/darkmod/props/textures/wallcandles1_d_ed
+	metal
+
+	noselfshadow
+	noshadows
+	diffusemap	models/md5/candles/wallcandles_old_d	
+	bumpmap		models/darkmod/props/textures/wallcandles1_local
+//	specularmap	models/darkmod/props/textures/wallcandles1_s
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/candles/wallcandles_old_d
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/candles/wallcandles_old_d		
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		models/darkmod/props/textures/wallcandles1_local			// Bump				
+		fragmentMap		2		models/md5/candles/wallcandles_old_d			// Diffuse			
+		fragmentMap		3		_black			// Specular			
+	}
+
+
+}
+
+textures/wood/wood_polished_black
+{
+    wood
+
+    qer_editorimage textures/wood/wood_polished_black_ed
+    diffusemap      textures/wood/wood_polished_black
+    bumpmap         textures/wood/wood_polished_black_local
+    specularmap	  textures/wood/wood_polished_black_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/wood/wood_polished_black
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/wood/wood_polished_black
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		textures/wood/wood_polished_black_local			// Bump				
+		fragmentMap		2		textures/wood/wood_polished_black			// Diffuse			
+		fragmentMap		3		textures/wood/wood_polished_black_s			// Specular			
+	}
+}
+
+
+
+textures/games/pool_hole
+{
+    wood
+
+    qer_editorimage textures/games/pool_hole_ed
+    diffusemap      textures/games/pool_hole
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/wood/wood_polished_black
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_hole
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat							// Bump				
+		fragmentMap		2		textures/games/pool_hole			// Diffuse			
+		fragmentMap		3		_black						// Specular			
+	}
+}
+
+
+
+
+textures/games/pool_ball_nr_1
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_1_ed
+    diffusemap      textures/games/pool_ball_nr_1
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_1
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_1
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_1			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_nr_2
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_2_ed
+    diffusemap      textures/games/pool_ball_nr_2
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_2
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_2
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_2			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+
+
+textures/games/pool_ball_nr_3
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_3_ed
+    diffusemap      textures/games/pool_ball_nr_3
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_3
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_3
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_3			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_nr_4
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_4_ed
+    diffusemap      textures/games/pool_ball_nr_4
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_4
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_4
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_4			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_nr_5
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_5_ed
+    diffusemap      textures/games/pool_ball_nr_5
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_5
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_5
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_5			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_nr_6
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_6_ed
+    diffusemap      textures/games/pool_ball_nr_6
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_6
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_6
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_6			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_nr_7
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_7_ed
+    diffusemap      textures/games/pool_ball_nr_7
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_7
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_7
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_7			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_nr_8
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_8_ed
+    diffusemap      textures/games/pool_ball_nr_8
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_8
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_8
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_8			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_nr_9
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_9_ed
+    diffusemap      textures/games/pool_ball_nr_9
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_9
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_9
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_9			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+
+textures/games/pool_ball_nr_10
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_10_ed
+    diffusemap      textures/games/pool_ball_nr_10
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_10
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_10
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_10			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+
+textures/games/pool_ball_nr_11
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_11_ed
+    diffusemap      textures/games/pool_ball_nr_11
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_11
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_11
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_11			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+
+
+textures/games/pool_ball_nr_12
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_12_ed
+    diffusemap      textures/games/pool_ball_nr_12
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_12
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_12
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_12			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_nr_13
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_13_ed
+    diffusemap      textures/games/pool_ball_nr_13
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_13
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_13
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_13			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_nr_14
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_14_ed
+    diffusemap      textures/games/pool_ball_nr_14
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_14
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_14
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_14			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_nr_15
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_nr_15_ed
+    diffusemap      textures/games/pool_ball_nr_15
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_nr_15
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_nr_15
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_nr_15			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_ball_white
+{
+    wood
+
+    qer_editorimage textures/games/pool_ball_white_ed
+    diffusemap      textures/games/pool_ball_white
+    specularmap	  textures/games/pool_ball_s
+{
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         textures/games/pool_ball_white
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_ball_white
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_ball_white			// Diffuse			
+		fragmentMap		3		textures/games/pool_ball_s			// Specular			
+	}
+}
+
+textures/games/pool_mat
+{
+     surftype15
+    description "pool_mat"
+
+    diffusemap     textures/games/pool_mat
+qer_editorimage     textures/games/pool_mat_ed
+
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend      add
+        map        textures/games/pool_mat
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				textures/games/pool_mat	
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		textures/games/pool_mat			// Diffuse			
+		fragmentMap		3		_black			// Specular			
+	}
+
+
+}
+
+
+noblebottom_spirit
+{
+  nonsolid
+  noshadows
+
+	{
+		blend diffusemap
+
+        	map models/md5/chars/nobles/noblewoman/noblebottom_spirit_d
+
+		alphaTest 0.5
+	}
+transluscent
+	bumpmap addnormals(models/md5/chars/nobles/noblewoman/noblebottom_local, heightmap( models/md5/chars/nobles/noblewoman/noblebottom_h, 3 ) )
+//	specularmap models/md5/chars/nobles/noblebottom_s
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/chars/nobles/noblewoman/noblebottom_spirit_d
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/chars/nobles/noblewoman/noblebottom_spirit_d		
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		addnormals ( models/md5/chars/nobles/noblewoman/noblebottom_local , heightmap ( models/md5/chars/nobles/noblewoman/noblebottom_h , 3 ) )			// Bump				
+		fragmentMap		2		models/md5/chars/nobles/noblewoman/noblebottom_spirit_d		// Diffuse			
+		fragmentMap		3		_black			// Specular			
+	}
+}
+
+
+
+
+
+nobletop_spirit
+{
+  nonsolid
+  noshadows
+	{
+		blend diffusemap
+		map models/md5/chars/nobles/noblewoman/nobletop_spirit_d
+		alphaTest 0.5
+	}
+transluscent
+	bumpmap addnormals(models/md5/chars/nobles/noblewoman/nobletop2_local, heightmap( models/md5/chars/nobles/noblewoman/nobletop_h, 3 ) )
+	specularmap models/md5/chars/nobles/nobletop_s
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/chars/nobles/noblewoman/nobletop_spirit_d
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/chars/nobles/noblewoman/nobletop_spirit_d
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		addnormals ( models/md5/chars/nobles/noblewoman/nobletop2_local , heightmap ( models/md5/chars/nobles/noblewoman/nobletop_h , 3 ) )			// Bump				
+		fragmentMap		2		models/md5/chars/nobles/noblewoman/nobletop_spirit_d		// Diffuse			
+		fragmentMap		3		models/md5/chars/nobles/nobletop_s			// Specular			
+	}
+}
+
+
+noblehands_spirit
+{
+  nonsolid
+  noshadows
+
+	{
+		blend diffusemap
+		map models/md5/chars/nobles/noblewoman/nobletop_d
+		alphaTest 0.5
+	}
+transluscent
+	bumpmap addnormals(models/md5/chars/nobles/noblewoman/nobletop2_local, heightmap( models/md5/chars/nobles/noblewoman/nobletop_h, 3 ) )
+	specularmap models/md5/chars/nobles/nobletop_s
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/chars/nobles/noblewoman/nobletop_d
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/chars/nobles/noblewoman/nobletop_d
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		addnormals ( models/md5/chars/nobles/noblewoman/nobletop2_local , heightmap ( models/md5/chars/nobles/noblewoman/nobletop_h , 3 ) )			// Bump				
+		fragmentMap		2		models/md5/chars/nobles/noblewoman/nobletop_d			// Diffuse			
+		fragmentMap		3		models/md5/chars/nobles/nobletop_s			// Specular			
+	}
+}
+
+
+
+noblelegs_spirit
+{
+  nonsolid
+  noshadows
+	{
+		blend diffusemap
+		map models/md5/chars/nobles/noblewoman/noblelegs_spirit
+		alphaTest 0.5
+	}
+transluscent
+
+	//bumpmap models/md5/chars/nobles/noblewoman/noblelegs_local
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/chars/nobles/noblewoman/noblelegs_spirit
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/chars/nobles/noblewoman/noblelegs_spirit	
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		_flat			// Bump				
+		fragmentMap		2		models/md5/chars/nobles/noblewoman/noblelegs_spirit		// Diffuse			
+		fragmentMap		3		_black			// Specular			
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+maid_skin_spirit
+{
+  nonsolid
+  noshadows
+ transluscent
+diffusemap	models/md5/chars/maid/maid_skin_spirit
+bumpmap models/md5/chars/townsfolk/wench/wench_skin_local
+
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/chars/maid/maid_skin_spirit
+
+
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/chars/maid/maid_skin_spirit
+		
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		models/md5/chars/townsfolk/wench/wench_skin_local			// Bump				
+		fragmentMap		2		models/md5/chars/maid/maid_skin_spirit			// Diffuse			
+		fragmentMap		3		_black			// Specular			
+	}
+}
+
+maid_dress_spirit
+{
+  nonsolid
+  noshadows
+ 
+
+	{
+		blend diffusemap
+		map models/md5/chars/maid/maid_dress_spirit
+
+		alphaTest 0.5
+	}
+transluscent
+	bumpmap addnormals(models/md5/chars/townsfolk/wench/wench_dress_local, heightmap( models/md5/chars/townsfolk/wench/wench_dress_h, 3 ) )
+	//specularmap models/md5/chars/townsfolk/wench_dress_s
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/chars/maid/maid_dress_spirit
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/chars/maid/maid_dress_spirit	
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		addnormals ( models/md5/chars/townsfolk/wench/wench_dress_local , heightmap ( models/md5/chars/townsfolk/wench/wench_dress_h , 3 ) )			// Bump				
+		fragmentMap		2		models/md5/chars/maid/maid_dress_spirit			// Diffuse			
+		fragmentMap		3		_black			// Specular			
+	}
+}
+
+maid_bodice_spirit
+{
+  nonsolid
+  noshadows
+
+	{
+		blend diffusemap
+		map models/md5/chars/maid/maid_dress_spirit
+
+		alphaTest 0.5
+	}
+transluscent
+	bumpmap addnormals(models/md5/chars/townsfolk/wench/wench_dress_local, heightmap( models/md5/chars/townsfolk/wench/wench_dress_h, 3 ) )
+	//specularmap models/md5/chars/townsfolk/wench_dress_s
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/chars/maid/maid_dress_spirit
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/chars/maid/maid_dress_spirit	
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		addnormals ( models/md5/chars/townsfolk/wench/wench_dress_local , heightmap ( models/md5/chars/townsfolk/wench/wench_dress_h , 3 ) )			// Bump				
+		fragmentMap		2		models/md5/chars/maid/maid_dress_spirit		// Diffuse			
+		fragmentMap		3		_black			// Specular			
+	}
+}
+
+
+maid_hands_spirit
+{
+  nonsolid
+  noshadows
+
+	{
+		blend diffusemap
+		map models/md5/chars/nobles/noblewoman/nobletop_spirit_d
+		alphaTest 0.5
+	}
+transluscent
+	bumpmap addnormals(models/md5/chars/nobles/noblewoman/nobletop2_local, heightmap( models/md5/chars/nobles/noblewoman/nobletop_h, 3 ) )
+	specularmap models/md5/chars/nobles/nobletop_s
+    {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/chars/nobles/noblewoman/nobletop_spirit_d
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/chars/nobles/noblewoman/nobletop_spirit_d	
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		addnormals ( models/md5/chars/nobles/noblewoman/nobletop2_local , heightmap ( models/md5/chars/nobles/noblewoman/nobletop_h , 3 ) )			// Bump				
+		fragmentMap		2		models/md5/chars/nobles/noblewoman/nobletop_spirit_d			// Diffuse			
+		fragmentMap		3		models/md5/chars/nobles/nobletop_s			// Specular			
+	}
+}
+
+
+
+
+
+
+
+
+spirit_hand  
+{
+  nonsolid
+  noshadows
+    
+diffusemap models/md5/chars/nobles/nobleman/spirit_hands
+ bumpmap addnormals(models/md5/chars/npc_hand_full_local.tga, heightmap( models/md5/chars/npc_hand_full_h.tga, 3 ) )
+
+ specularmap models/md5/chars/npc_hand_full_s.tga
+ 
+ {
+        if ( parm11 > 0 )
+        blend       gl_dst_color, gl_one
+        map         _white
+        rgb         0.40 * parm11
+    }
+    {
+        if ( parm11 > 0 )
+        blend       add
+        map         models/md5/chars/nobles/nobleman/spirit_hands
+        rgb         0.15 * parm11
+    }
+
+	// TDM Ambient Method Related 
+	{							
+		if (global5 == 1)		
+		blend add				
+		map				models/md5/chars/nobles/nobleman/spirit_hands
+		scale			1, 1		
+		red				global2	
+		green			global3	
+		blue			global4	
+	}							
+	{							
+		if (global5 == 2)		
+		blend add				
+		program	ambientEnvironment.vfp	
+		vertexParm		0		1, 1, 1, 1		// UV Scales for Diffuse and Bump	
+		vertexParm		1		1, 1, 1, 1	// (X,Y) UV Scale for specular		
+		vertexParm		2		global2, global3, global4, 1	
+																
+		fragmentMap		0		cubeMap env/gen1				
+		fragmentMap		1		addnormals ( models/md5/chars/npc_hand_full_local.tga , heightmap ( models/md5/chars/npc_hand_full_h.tga , 3 ) )			// Bump				
+		fragmentMap		2		models/md5/chars/nobles/nobleman/spirit_hands			// Diffuse
+		fragmentMap		3		models/md5/chars/npc_hand_full_s.tga			// Specular
+	}
+}
+
+
+
+
+

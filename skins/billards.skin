@@ -1,0 +1,107 @@
+
+skin billiard_ball_1
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_1
+}
+
+
+skin billiard_ball_2
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_2
+}
+
+skin billiard_ball_3
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_3
+}
+
+skin billiard_ball_4
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_4
+}
+
+skin billiard_ball_5
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_5
+}
+
+skin billiard_ball_6
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_6
+}
+
+skin billiard_ball_7
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_7
+}
+
+skin billiard_ball_8
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_8
+}
+
+skin billiard_ball_9
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_9
+}
+
+skin billiard_ball_10
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_10
+}
+
+skin billiard_ball_11
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_11
+}
+
+skin billiard_ball_12
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_12
+}
+
+skin billiard_ball_13
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_13
+}
+
+skin billiard_ball_14
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_14
+}
+
+skin billiard_ball_15
+{
+	model models/billiard_ball.ase
+	
+	textures/games/pool_ball_white	textures/games/pool_ball_nr_15
+}
+

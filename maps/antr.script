@@ -1,0 +1,587 @@
+float has_oil = 0;			// Checks if player has picked up the oil flask.
+float trap_on = 1;			// Checks if the trap is activated or not.
+float oiled = 0;				// Checks if the freezer mechanism is oiled or not
+float moving = 0;			// Checks if the freezer lid is moving or not.
+
+
+void main()
+{
+// SOME OF THE ROOMS IN THE MANSION WILL HAVE OLD TEXTURES IN THEM.
+// THEY WILL NOT BE VISIBLE UNTIL LATER.
+
+	$node_foot_prints.hide();				// Hide foot prints
+	$note_on_conserv_door.hide();				// Hide note on inside of conservatory door
+	$ernst_cromwell.kill();					// Kill Cromwell
+	$trap_spikes.hide();					// Hide the spikes in the hidden compartment
+	$master_bedroom_hatch.hide();
+	$lights_off_sq_node.hide();
+	$lights_on_sq_node.show();
+
+
+
+// THE GHOSTS ARE ALLOWED TO MOVE THROUGH MOST WALLS. THESE OPENINGS WOULD CAUSE LEAKS BETWEEN THE LEAFS
+// IF NOT SEALED PROPERLY. THESE PORTALS ARE CLOSED AT ALL TIMES TO PROHIBIT THE OPENINGS TO HAMPER
+// THE PERFORMANCE.
+
+	$func_portal_1.activate($player1);
+	$func_portal_2.activate($player1);
+	$func_portal_3.activate($player1);
+	$func_portal_4.activate($player1);
+	$func_portal_5.activate($player1);
+	$func_portal_6.activate($player1);
+	$func_portal_7.activate($player1);
+	$func_portal_8.activate($player1);
+	$func_portal_9.activate($player1);
+	$func_portal_10.activate($player1);
+	$func_portal_11.activate($player1);
+	$func_portal_12.activate($player1);
+	$func_portal_13.activate($player1);
+	$func_portal_14.activate($player1);
+	$func_portal_15.activate($player1);
+	$func_portal_16.activate($player1);
+	$func_portal_17.activate($player1);
+	$func_portal_18.activate($player1);
+	$func_portal_19.activate($player1);
+	$func_portal_20.activate($player1);
+	$func_portal_21.activate($player1);
+	$func_portal_22.activate($player1);
+
+
+// THE MAIN GATE TO THE MANSION WILL BE OPEN AT FIRST BUT WILL CLOSE LATER IN THE MISSION.
+
+	$closed_gate.hide();					// Hide the closed main gate
+	$closed_gate_chain.hide();				// Hide the chain on the gate
+	$do_not_exit_1.hide();					// Hide the note chained to the gate
+	$nail_1.hide();						// Hide the nail on the servants exit door
+
+
+// THE PAINTING IN THE LIBRARY IS HAUNTED. HER EYES ARE INVISIBLE AT FIRST.
+
+	$evil_eyes.hide();
+
+
+//LIGHTNING:
+
+// ALL BRIGHTLY LIT WINDOWS AND LIGHTNING EFFECTS ARE HIDDEN AT START OF GAME
+// THEN A TIMER FOR EACH DIRECTION IS STARTED THAT WILL START A SCRIPT PER LIGHTNING.
+// EACH DIRECTION HAS TWO LIGHTNING EFFECTS AND THERE IS AN OFFSET
+// ON THE TIMERS TO MAKE THE FLASHES ALTER ON EACH DIRECTION.
+
+// THE FLASHES WORK LIKE THIS:
+// THE BRIGHTLY LIT WINDOWS ALONG WITH THE CORESPONDING LIGHTS ARE SHOWN FOR 0.1 SECONDS, THEN HIDDEN AGAIN.
+// AFTER A FEW SECONDS A THUNDER SOUND WILL BE TRIGGERED.
+
+
+// LIGHTNING FROM THE EAST
+	$lightning_flash_east_node_1.hide();			// Hide flashes 1
+	$lightning_flash_east_node_2.hide();			// Hide flashes 2
+	$bright_windows_east_node.hide();			// Hide bright windows
+
+// LIGHTNING FROM THE WEST
+	$lightning_flash_west_node_1.hide();			// Hide flashes 1
+	$lightning_flash_west_node_2.hide();			// Hide flashes 2
+	$bright_windows_west_node.hide();			// Hide bright windows
+
+// LIGHTNING FROM THE SOUTH
+	$lightning_flash_south_node_1.hide();			// Hide flashes 1
+	$lightning_flash_south_node_2.hide();			// Hide flashes 2
+	$bright_windows_south_node.hide();			// Hide bright windows
+
+// LIGHTNING FROM THE NORTH
+	$lightning_flash_north_node_1.hide();			// Hide flashes 1
+	$lightning_flash_north_node_2.hide();			// Hide flashes 2
+	$bright_windows_north_node.hide();			// Hide bright windows
+
+
+
+// THUNDER: THIS WILL START THE TIMERS. NOTE THE DELAY BETWEEN THE TIMERS. THIS WILL OFFSET THE CRASHES
+// BY 30 SEC
+
+	$timer_que_thunder_east_1.activate($player1);		// Start thunder east 1
+sys.wait(30);
+	$timer_que_thunder_east_2.activate($player1);		// Start thunder east 2
+sys.wait(30);
+	$timer_que_thunder_west_1.activate($player1);		// Start thunder west 1
+sys.wait(30);
+	$timer_que_thunder_west_2.activate($player1);		// Start thunder west 2
+sys.wait(30);
+	$timer_que_thunder_south_1.activate($player1);		// Start thunder south 1
+sys.wait(30);
+	$timer_que_thunder_south_2.activate($player1);		// Start thunder south 2
+sys.wait(30);
+	$timer_que_thunder_north_1.activate($player1);		// Start thunder north 1
+sys.wait(30);
+	$timer_que_thunder_north_2.activate($player1);		// Start thunder north 2
+
+
+// END OF MAIN
+}
+
+
+// LIGHTNING AND THUNDER: THESE SCRIPTS ARE TRIGGERED FROM THE TIMERS ABOVE.
+
+void lightning_east_1()
+{
+	sys.print("\nFiring east lightning 1!\n");
+$lightning_flash_east_node_1.show();		 	// Show flashes 1
+$bright_windows_east_node.show();			// Show bright windows
+sys.wait(0.1); 						// Wait
+$lightning_flash_east_node_1.hide();			// Hide flashes 1
+$bright_windows_east_node.hide();			// Hide bright windows
+
+sys.wait(2);						// Wait
+
+sys.trigger($thunder_sound_1);				// Que thunder sound 1
+}
+
+void lightning_east_2()
+{
+	sys.print("\nFiring east lightning 2!\n");
+$lightning_flash_east_node_2.show();		 	// Show flashes 2
+$bright_windows_east_node.show();			// Show bright windows
+sys.wait(0.1); 						// Wait
+$lightning_flash_east_node_2.hide();			// Hide flashes 2
+$bright_windows_east_node.hide();			// Hide bright windows
+
+sys.wait(3);						// Wait
+
+sys.trigger($thunder_sound_2);				// Que thunder sound 2
+}
+
+void lightning_west_1()
+{
+	sys.print("\nFiring west lightning 1!\n");
+$lightning_flash_west_node_1.show();		 	// Show flashes 2
+$bright_windows_west_node.show();			// Show bright windows
+sys.wait(0.1); 						// Wait
+$lightning_flash_west_node_1.hide();			// Hide flashes 2
+$bright_windows_west_node.hide();			// Hide bright windows
+
+sys.wait(1);						// Wait
+
+sys.trigger($thunder_sound_3);				// Que thunder sound 3
+}
+
+void lightning_west_2()
+{
+	sys.print("\nFiring west lightning 2!\n");
+$lightning_flash_west_node_2.show();		 	// Show flashes 2
+$bright_windows_west_node.show();			// Show bright windows
+sys.wait(0.1); 						// Wait
+$lightning_flash_west_node_2.hide();			// Hide flashes 2
+$bright_windows_west_node.hide();			// Hide bright windows
+
+sys.wait(3);						// Wait
+
+sys.trigger($thunder_sound_4);				// Que thunder sound 4
+}
+
+void lightning_south_1()
+{
+	sys.print("\nFiring south lightning 1!\n");
+$lightning_flash_south_node_1.show();		 	// Show flashes 2
+$bright_windows_south_node.show();			// Show bright windows
+sys.wait(0.1); 						// Wait
+$lightning_flash_south_node_1.hide();			// Hide flashes 2
+$bright_windows_south_node.hide();			// Hide bright windows
+
+sys.wait(2);						// Wait
+
+sys.trigger($thunder_sound_5);				// Que thunder sound 5
+}
+
+void lightning_south_2()
+{
+	sys.print("\nFiring south lightning 2!\n");
+$lightning_flash_south_node_2.show();		 	// Show flashes 2
+$bright_windows_south_node.show();			// Show bright windows
+sys.wait(0.1); 						// Wait
+$lightning_flash_south_node_2.hide();			// Hide flashes 2
+$bright_windows_south_node.hide();			// Hide bright windows
+
+sys.wait(1);						// Wait
+
+sys.trigger($thunder_sound_6);				// Que thunder sound 6
+}
+
+void lightning_north_1()
+{
+	sys.print("\nFiring north lightning 1!\n");
+$lightning_flash_north_node_1.show();		 	// Show flashes 2
+$bright_windows_north_node.show();			// Show bright windows
+sys.wait(0.1); 						// Wait
+$lightning_flash_north_node_1.hide();			// Hide flashes 2
+$bright_windows_north_node.hide();			// Hide bright windows
+
+sys.wait(1);						// Wait
+
+sys.trigger($thunder_sound_7);				// Que thunder sound 7
+}
+
+void lightning_north_2()
+{
+	sys.print("\nFiring north lightning 1!\n");
+$lightning_flash_north_node_2.show();		 	// Show flashes 2
+$bright_windows_north_node.show();			// Show bright windows
+sys.wait(0.1); 						// Wait
+$lightning_flash_north_node_2.hide();			// Hide flashes 2
+$bright_windows_north_node.hide();			// Hide bright windows
+
+sys.wait(1);						// Wait
+
+sys.trigger($thunder_sound_8);				// Que thunder sound 8
+}
+
+
+
+
+
+// THE DOOR TO THE SERVANTS QUARTERS ARE CLOSED AT FIRST. THIS SCRIPT IS RUN WHEN THE PLAYER EXITS THE STYDY
+// TO CHASE THE THIEF.
+
+void thief_chase()
+{
+	$show_pursuit_objective.activate($player1);	// Show the objective about chasing the thief.
+	$teleport_fail_trigger_1.activate($player1);	// Teleport in triggers that will fail the mission.
+	$teleport_fail_trigger_2.activate($player1);
+	$teleport_fail_trigger_3.activate($player1);
+	$teleport_fail_trigger_4.activate($player1);
+	$teleport_fail_trigger_5.activate($player1);
+	$teleport_fail_trigger_6.activate($player1);
+	$teleport_fail_trigger_7.activate($player1);
+
+
+	$show_direction.activate($player1);			// Show info about where to go.
+	$node_foot_prints.show();				// Show foot prints.
+	$sound_running_thief.activate($player1);		// Que running foot steps.
+	$servants_quarters_door.Unlock();			// Open door to servants quarters.
+	$servant_door_upper_1.Unlock();			// Open door inside servants quarters.
+}
+
+// WHEN THE PLAYER IS INSIDE THE SERVANTS QUARTERS A NEW STRING OF EVENTS WILL OCCUR.
+void thief_chase_more()
+{
+	$door_for_servants_4.Unlock();			// Open lower door to servants quarters.
+	$sound_crashing_barrel.activate($player1);	// Que crashing sound.
+	sys.wait(1.5);	
+	$sound_dropped_lockpicks.activate($player1);	// Que clinking sound of lockpicks.
+	$door_for_servants_1.Unlock();			// Open door to dining room.
+	sys.wait(1);	
+	$sound_running_thief_2.activate($player1);	// Que running foot steps.
+
+	$teleport_ghost_balcony_away.activate($player1);// Remove the ghost on the balcony.
+}
+
+void pursuit_completed()
+{
+	$pursuit_completed.activate($player1);
+	$show_obj_7.activate($player1);
+	$teleport_start_ghost_fireplace_trigger.activate($player1);
+	$teleport_ghost_fireplace.activate($player1);
+	$teleport_trigger_open_trophy_doors.activate($player1);
+	$teleport_away_fail_trigger_1.activate($player1);
+	$teleport_away_fail_trigger_2.activate($player1);
+	$teleport_away_fail_trigger_3.activate($player1);
+	$teleport_away_fail_trigger_4.activate($player1);
+	$teleport_away_fail_trigger_5.activate($player1);
+	$teleport_away_fail_trigger_6.activate($player1);
+	$teleport_away_fail_trigger_7.activate($player1);
+
+	$speaker_piano_tune.activate($player1);
+}
+
+
+
+// WHEN THE PLAYER GETS NEAR, THE GHOST BY THE FIREPLACE WILL START PATROLING.
+void start_ghost_fireplace()
+{
+	$speaker_spooky_hit_3.activate($player1);
+	$light_fireplace_node.hide();
+	$lamp_fireplace_1.activate($player1);
+	$lamp_fireplace_2.activate($player1);
+	$lamp_fireplace_3.activate($player1);
+	$lamp_fireplace_4.activate($player1);
+	$lamp_fireplace_5.activate($player1);
+	$teleport_lit_candle.activate($player1);
+	$teleport_unlit_candle.activate($player1);
+
+
+
+	sys.wait(3);
+	$ghost_fireplace.activate($player1);
+
+}
+
+// WHEN THE PLAYER MOVES INTO THE SERVANTS QUARTERS, A GHOST WILL APPEAR IN THE CORRIDOR.
+
+void start_servant_quarters_ghost()
+{
+	$lamp_sq_1.activate($player1);
+	$light_sq_1.activate($player1);
+	$lamp_sq_2.activate($player1);
+	$light_sq_2.activate($player1);
+	$lamp_sq_3.activate($player1);
+	$light_sq_3.activate($player1);
+	$lamp_sq_4.activate($player1);
+	$light_sq_4.activate($player1);
+	$lamp_sq_5.activate($player1);
+	$light_sq_5.activate($player1);
+	$lamp_sq_6.activate($player1);
+	$light_sq_6.activate($player1);
+
+
+
+	$speaker_spooky_hit_2.activate($player1);
+	$teleport_ghost_servant_quarters.activate($player1);
+	sys.wait(0.1); 
+	$ghost_first_contact.activate($player1);
+	$ghost_servant_quarters.activate($player1);
+	$lights_off_sq_node.show();
+	$lights_on_sq_node.hide();
+}
+
+
+
+// WHEN THE PLAYER MOVES TOWARDS THE MIRROR BY THE LIBRARY A GHOST WILL APPEAR BEHIND HIM.
+
+void start_game_room_ghost()
+{
+// Turn off all lights in game room corridor
+	$lamp_1_light.activate($player1);
+	$lamp_1.activate($player1);
+	$lamp_2_light.activate($player1);
+	$lamp_2.activate($player1);
+	$lamp_3_light.activate($player1);
+	$lamp_3.activate($player1);
+	$lamp_4_light.activate($player1);
+	$lamp_4.activate($player1);
+	$game_corridor_ambient_light.activate($player1);
+
+
+
+	$teleport_ghost_game_room.activate($player1);
+	sys.wait(0.1); 
+	$ghost_game_room.activate($player1);
+	sys.wait(1.5); 
+	$speaker_spooky_hit.activate($player1);
+
+
+	$teleport_remove_painting_1.activate($player1);	// Teleport away func_static
+	$teleport_falling_painting_1.activate($player1);	// Teleport in physics painting
+
+	$teleport_remove_painting_2.activate($player1);	// Teleport away func_static
+	$teleport_falling_painting_2.activate($player1);	// Teleport in physics painting
+	sys.print("\nPainting 1 and 2 are falling!\n");
+}
+
+
+// WHEN THE PLAYER STEALS THE SWORD HE WILL ACTIVATE THE GHOST OF CROMWELL
+
+void start_trophy_room_ghost()
+{
+	sys.print("\nSword stolen\n");
+	$fireflames_trophy_room_node.hide();
+	$lamp_trophy_room_1.activate($player1);
+	$lamp_trophy_room_2.activate($player1);
+	$lamp_trophy_room_3.activate($player1);
+	$lamp_trophy_room_4.activate($player1);
+
+	$speaker_spooky_hit_4.activate($player1);
+	$teleport_ghost_trophy_room.activate($player1);
+	sys.wait(0.1); 
+	$ghost_trophy_room.activate($player1);
+}
+
+
+void open_trophy_doors()
+{
+	$speaker_creak.activate($player1);
+	$door_trophy_room_1.Unlock();
+	$door_trophy_room_2.Unlock();
+}
+
+
+
+// OIL IS NEEDED TO OPERATE THE VALVE TO THE FREEZER.
+void pick_up_oil()
+{
+	$oil.hide();						// Remove the flask.
+	has_oil = 1;						// Change the switch so the player has the oil.
+	sys.print("\nPicked up oil_flask\n");
+	$message_pick_up_oil.activate($player1);		// Show pickup message
+}
+
+// WHEN THE VALVE TO THE FREEZER IS FROBBED
+void operate_freezer()
+{
+if (has_oil == 1)
+		{
+			if (moving == 0)
+				{
+					if (oiled == 0)
+						{
+							$has_oil_message.activate($player1);// Show oiled message.
+							oiled = 1;
+						}
+
+				moving = 1;
+				$freezer_chain.activate($player1);
+				$speaker_freezer_operate.activate($player1);	// PLAY FREEZER OPEN SOUND
+				sys.waitFor($freezer_chain);		// WAIT UNTIL THE LID HAS MOVED
+
+
+
+				moving = 0;
+				}
+		}
+if (has_oil == 0)
+		{
+			$speaker_needs_oil.activate($player1);
+			$oil_message.activate($player1);	// Show oil-needed message.
+		}
+}
+
+
+
+
+// WHEN THE PIANO IS FROBBED A SOUND WILL PLAY 
+
+void piano()
+{
+	$piano_sound.activate($player1);	
+}
+
+
+
+// THIS WILL TRIGGER THE EYES OF THE HAUNTED PAINTING IN THE LIBRARY.
+// (CONSISTING OF TWO RED SQUARES AND THREE LIGHTS.)
+
+void evil_eyes()
+{
+	$evil_eyes.show();					// Show evil eyes
+	$evil_eye_right.activate($player1);			// Show light right eye
+	$evil_eye_left.activate($player1);			// Show light left eye
+	$evil_glow.activate($player1);			// Show glow
+
+sys.wait(1.5);
+	$evil_eyes.hide();					// Hide evil eyes
+	$evil_eye_right.activate($player1);			// Hide light right eye
+	$evil_eye_left.activate($player1);			// Hide light left eye
+	$evil_glow.activate($player1);			// Hide glow
+}
+
+// THIS WILL CAUSE THE HAUNTED PAINTING IN THE TEA ROOM TO FALL FROM THE WALL.
+// (IT WILL REPLACE A FUNC_STATIC PAINTING WITH A PAINTING WITH PHYSICS.)
+
+void falling_painting()
+{
+	$teleport_remove_painting.activate($player1);	// Teleport away func_static
+	$teleport_falling_painting.activate($player1);	// Teleport in physics painting
+	sys.print("\nPainting is falling!\n");
+}
+
+
+// THIS WILL LOCK THE FRONT GATE.
+
+void lock_front_gate()
+{
+	$closed_gate.show();
+	$open_gate.hide();
+	$closed_gate_chain.show();
+	$do_not_exit_1.show();	
+	$nail_1.show();	
+}
+
+
+// THIS WILL ROLL UP THE MAT IN THE MASTER BED ROOM AND REVEAL THE HATCH TO THE HIDDEN COMPARTMENT.
+
+void mat_roll()
+{
+	$speaker_matt_roll.activate($player1);		// Play rustling sound	
+	$teleport_remove_mat.activate($player1);	// Remove section of mat
+	$teleport_mat_roll.activate($player1);		// Add a roll
+	$master_bedroom_hatch.show();			// The hatch is added later to avoid frobbing through the mat
+	sys.print("\nMat is rolled up!\n");
+}
+
+
+void change_exit_plans()
+{
+	$hide_obj_5.activate($player1);
+	$show_obj_9.activate($player1);
+	$note_on_conserv_door.show();
+	$door_hint.hide();
+	$nail_2.hide();
+
+// OPEN GATE AND REMOVE SCROLLS
+
+	$closed_gate.hide();				// Hide the closed main gate
+	$open_gate.show();					// Show the open gate
+	$closed_gate_chain.hide();			// Hide the chain on the gate
+	$do_not_exit_1.hide();				// Hide the note chained to the gate
+	$do_not_exit_2.hide();				// Hide the note on the servants exit door
+	$nail_1.hide();						// Hide the nail on the servants exit door
+}
+
+
+void enable_gold_objective()
+{
+	$show_gold_objective.activate($player1);
+	$mat.setFrobable(1);				// Make the mat in the master bedroom frobable so the player can roll it up
+	$secret_master_bedroom_hatch.setFrobable(1);	// Make the hatch in the master bedroom frobable so the player can open it
+}
+
+
+void trap_control()
+{
+if (trap_on == 1)
+	{
+	trap_on = 0;
+	sys.print("\nTrap is deactivated!\n");
+	$masterbedroom_trap_off_message.activate($player1);
+	}
+
+else
+	{
+	trap_on = 1;
+	sys.print("\nTrap is activated!\n");
+	$masterbedroom_trap_on_message.activate($player1);
+	}
+}
+
+
+
+void trap()
+{
+if (trap_on == 1)
+	{
+	$trap_spikes.show();
+	$speaker_trap.activate($player1);
+sys.wait(0.2);
+	$speaker_trap_2.activate($player1);
+	$trap_killer.activate($player1);
+	}
+}
+
+
+void FrobMapUpper()
+{
+       // Put map_of_mansion_upper into inventory, replacing the frobbed scroll named MapUpper.
+       // map_of_mansion_upper shows the upper map when used while in inventory.
+       // Make sure HUD shows the map icon.
+
+       $player1.replaceInvItem($MapUpper,$map_of_mansion_upper);
+       $player1.setCurInvItem("Map Upper floor"); // provide inventory name, not item name
+
+}
+
+void FrobMapLower()
+{
+       // Put map_of_mansion_lower into inventory, replacing the frobbed scroll named MapLower.
+       // map_of_mansion_lower shows the lower map when used while in inventory.
+       // Make sure HUD shows the map icon.
+
+       $player1.replaceInvItem($MapLower,$map_of_mansion_lower);
+       $player1.setCurInvItem("Map Lower floor"); // provide inventory name, not item name
+
+}

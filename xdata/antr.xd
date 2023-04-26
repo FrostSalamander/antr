@@ -1,0 +1,721 @@
+do_not_exit
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		""
+		""
+		""
+		""
+		"               My murderer still lives."
+		"                  You may not leave."
+	}
+	"gui_page1"	: "guis/readables/scrolls/scroll_calig_lotharus.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+freezer_sign
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		"Steam-Augmented Temperature Control Apparatus"
+	}
+	"gui_page1"	: "guis/readables/marble_grey.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+do_not_exit_2
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		""
+		""
+		""
+		""
+		"               My murderer still lives."
+		"                  You may not leave."
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_calig_lotharus.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+guest_book
+{
+	precache
+	"num_pages"	: "4"
+	"page1_left_title"	:
+	{
+		""
+	}
+	"page1_left_body"	:
+	{
+		"CROMWELL GUESTBOOK"
+		""
+		"Welcome to the Cromwell Estate, Lord Ernst Cromwell and his Lady Regina Cromwell extends their heartfelt greetings. Please, do make a note of your stay and share a witty comment with us all."
+		""
+	}
+	"page1_right_title"	:
+	{
+		""
+	}
+	"page1_right_body"	:
+	{
+		""
+	}
+	"page2_left_title"	:
+	{
+		""
+	}
+	"page2_left_body"	:
+	{
+		"July"
+		"Nothing like a good drink and game of pool in good company, eh, Ernst?"
+		" - Sir Sirian Bertrand"
+		""
+		"I would like to thank you all for the invitation"
+		" - Sir Thomas Hemmingway and his beloved wife Michelle Hemmingway"
+	}
+	"page2_right_title"	:
+	{
+		""
+	}
+	"page2_right_body"	:
+	{
+		"August"
+		"Decent, I suppose, although a tad lacking, don't you think?"
+		"Magellan Galba"
+		""
+		"Another bloody evening, another bloody request for funding..."
+		"Daniel Gilard, Arch-Lector of the Inventors' Guild, who is rather tired of all this flying machine nonsense."
+	}
+	"page3_left_title"	:
+	{
+		""
+	}
+	"page3_left_body"	:
+	{
+		"A pleasure, as always"
+		"Lady Terevaine"
+		""
+		"September"
+		""
+		"You and your parties never cease to amaze me, Gina"
+		"Lady Jessica Aldestraat"
+	}
+	"page3_right_title"	:
+	{
+		""
+	}
+	"page3_right_body"	:
+	{
+		"For the life of me, I will never understand how you managed to build such a beautiful conservatory."
+		"Baroness Ann Themalin Harcourt"
+		""
+		"Another splendid evening, Ernst"
+		"Lord Marcus Delacroix"
+	}
+	"page4_left_title"	:
+	{
+		""
+	}
+	"page4_left_body"	:
+	{
+		"Irrigation tunnels, indoor gardens, flying machines - will your engineering muse ever let you rest?"
+		"Duke Ortega, who still very much wishes to see his hotel completed"
+	}
+	"page4_right_title"	:
+	{
+		""
+	}
+	"page4_right_body"	:
+	{
+		"October"
+		"Builder bless all honest men."
+		"Father Grejoy Tellam"
+		""
+		"Fortunate to be allowed inside, much less invited!"
+		"Sir Doyle"
+	}
+	"gui_page1"	: "guis/readables/books/book_calig_summertime.gui"
+	"gui_page2"	: "guis/readables/books/book_hand_andrew_script.gui"
+	"gui_page3"	: "guis/readables/books/book_hand_andrew_script.gui"
+	"gui_page4"	: "guis/readables/books/book_hand_andrew_script.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+door_hint_1
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		""
+		""
+		""
+		""
+		"The murderer is trapped inside but I cannot reach him. You must do so."
+		""
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_calig_lotharus.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+letter_from_mira
+{
+	precache
+	"num_pages"	: "2"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		"The 21st of September, 1721"
+		""
+		"Dearest Regina,"
+		"I hope this reaches you in good health. For myself, I am quite well, if a tad distraught at the moment. I would like to ask on the health of your dear Ernst and to hear about what new, wonderous machine he is building, but I am afraid that I must be quite blunt. Have you heard who the City Watch fished out of the waters of the Flood Ward? Marcus Ortega, Duke Ortega's own son. He had been cut to pieces, a great hammer burned into his forehead!"
+	}
+	"page2_title"	:
+	{
+		""
+	}
+	"page2_body"	:
+	{
+		"I am sorry for bringing up such grisly news, but I felt that you should know, seeeing as he is the son of your husband's one and only sponsor. I fear for you two, I fear that there are powers working against you at every turn. Please, if you can, persuade your husband to abandon this project of his before any harm comes to the both of you."
+		""
+		"Your ever-loving sister,"
+		"Mira Elatto"
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_hand_andrew_script.gui"
+	"gui_page2"	: "guis/readables/sheets/sheet_paper_hand_andrew_script.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+note_under_door
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		""
+		""
+		""
+		""
+		"You are not welcome here, thief, the priest even less so. You will address this."
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_calig_lotharus.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+letter_from_terevaine
+{
+	precache
+	"num_pages"	: "3"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		"The 20th of October, 1721"
+		""
+		"My dear Sir Doyle,"
+		""
+		"I do hope this letter finds you in good health and that you are enjoying your stay at the Cromwell Estate. I have heard that nature, once properly tamed, can do wonders for your health. However, I worry that they might not be sufficient to cure a man of his vices. Be they gambling, drinking or petty theft or, as is so painfully relevant in your case, debts. I hope that I need not remind you that it is only through remaining in my good graces that your creditors are suitably paid off and, as it happens, how Bridgeport is kept from finding out about your rather scandalous behaviour. Few would look favourably upon a man of such good stock as yourself dressing up as a common thief and robbing his dear friends in the middle of the night."
+	}
+	"page2_title"	:
+	{
+		""
+	}
+	"page2_body"	:
+	{
+		"Fewer still would believe his ramblings of having been forced to by a mere lady, I imagine."
+		""
+		"So in the future, please refrain from trying to avoid me. It will not help your cause in the slightest."
+		""
+		"Now, with that ugly matter out of the way, let us get down to business. I have another task I would like you to attend to. Be not alarmed, it requires no strenous activity of yours. In fact, I imagine it will be rather pleasant, all things considered. What I need from you is quite simple: Find the blueprints to the Gottfried II and acquire them for me. Normally I would not care either way, but it seems that Lord Cromwell has actually found someone foolish enough to fund this project of his. Some Duke Ortega, it seems, if that matters to you. Now, I know that he has become a good friend of yours and all that. Look at it this way: Do you have any idea how many ship"
+	}
+	"page3_title"	:
+	{
+		""
+	}
+	"page3_body"	:
+	{
+		"merchants will be put out of business if that thing ever sails the skies? Think of their little children going hungry, Henry, think of their little children weeping and begging in the streets!"
+		""
+		"I don't know if that would actually happen or not, but I figured that it would be a good way to motivate you. Besides, who knows, perhaps you will even be able to finally pay off your debts. Where there is a will, there is a way and all that."
+	}
+	"gui_page1"	: "guis/readables/scrolls/scroll_hand_ellianerelle_smaller.gui"
+	"gui_page2"	: "guis/readables/scrolls/scroll_hand_ellianerelle_smaller.gui"
+	"gui_page3"	: "guis/readables/scrolls/scroll_hand_ellianerelle_smaller.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+your_journal
+{
+	precache
+	"num_pages"	: "3"
+	"page1_left_title"	:
+	{
+		""
+	}
+	"page1_left_body"	:
+	{
+		"Diary entry, 20th of October, 1721"
+		""
+		"Say one thing about Sir Henry Doyle, say he's a taffing idiot. Yes, I admit that. Only a taffing idiot would try to rob Lord taffing Cromwell, much less do it while being his honoured guest. I came out here to enjoy the quiet countryside and to study under the great inventor so that I could forget about all the troubles back in Bridgeport."
+	}
+	"page1_right_title"	:
+	{
+		""
+	}
+	"page1_right_body"	:
+	{
+		"But I suppose they didn't forget about me, nor did the Lady Terevaine. She must've found out I was staying at Cromwell's estate somehow, seeing as she had a letter delivered to me right in the middle of supper. Could barely keep a straight face as I read it. The nerve of that woman... Thankfully, my fellow guest at the mansion, Father Tellam had another heated argument with Cromwell about the whole Gottfried II project."
+	}
+	"page2_left_title"	:
+	{
+		""
+	}
+	"page2_left_body"	:
+	{
+		"Called it a great sin against the Builder and all that. Ironic, considering what Lady Terevaine wrote to me, but it did give me the perfect excuse to retire for the night. Still, it seems I have yet another job to do for this little shrew. And like always, she promises that this one will be the last of them before she finally helps me with my debts. For the life of me, I will never understand what she gets out of these oddjobs, "
+	}
+	"page2_right_title"	:
+	{
+		""
+	}
+	"page2_right_body"	:
+	{
+		"but I suspect it might just be some form of deranged joy at seeing me stumble around robbing everyone I know. And this time, she wants me to steal Lord Cromwell's very passion, the blueprints for his beloved airship."
+		"That in itself will not be a hard task, given that Cromwell doesn't allow any guards indoors. From what he has told me, I suspect the blueprints to be in his study on the second floor"
+	}
+	"page3_left_title"	:
+	{
+		""
+	}
+	"page3_left_body"	:
+	{
+		"of the east wing. I'll need to be careful, however. Cromwell is a dangerous man and should my hand in this be known, he will make my money problems seem like a pleasant afternoon stroll. I'll need to mask this theft as a robbery, so I should try and steal as much as I can, perhaps smash a window or two along the way. With any luck, I'll find enough goods to actually pay my debts and get free of that taffing Lady Terevaine..."
+	}
+	"page3_right_title"	:
+	{
+		""
+	}
+	"page3_right_body"	:
+	{
+		""
+	}
+	"gui_page1"	: "guis/readables/books/book_calig_camberic.gui"
+	"gui_page2"	: "guis/readables/books/book_calig_camberic.gui"
+	"gui_page3"	: "guis/readables/books/book_calig_camberic.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+plaque_note
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		"Cleaning duties for October:"
+		"Molly:"
+		"West wing guest rooms, library, game room"
+		""
+		"Sarah:"
+		"East wing trophy room, tea room and art gallery"
+		""
+		"Gertrude:"
+		"Main hall, master bedroom and dining hall"
+		""
+		"- Housekeeper Gertrude"
+		""
+		"PS: Sarah, remember to return the art room key to me after you are done with it. The Lady likes it to be locked."
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_calig_carolingia.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+plaque_note2
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		""
+		""
+		""
+		""
+		""
+		""
+		"Moved the oil flask to the art room. It was fouling up the vegetables"
+		""
+		"- Molly"
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_hand_nancy.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+plaque_note3
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		"To all staff members:"
+		""
+		"Whoever lost the spare key for the Conservatory had better find it again, else they can look elsewhere for employment. It is missing from my keybox and I want it back - now."
+		""
+		"Louis Delago"
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_calig_treasure_map.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+butlers_journal
+{
+	precache
+	"num_pages"	: "2"
+	"page1_left_title"	:
+	{
+		""
+	}
+	"page1_left_body"	:
+	{
+		"12th of August, 1721"
+		""
+		"The household economics seem to have stabilized, for now. Duke Ortega was most fortcoming in his efforts to aid milord Cromwell in his financial troubles. A full chest of the finest gold, sent from his very own mines and straight to our household. With this, milord might finally see his project through - without ruining his family legacy, that is."
+		""
+		"On the other hand, it seems milord Cromwell is a tad too"
+	}
+	"page1_right_title"	:
+	{
+		""
+	}
+	"page1_right_body"	:
+	{
+		"protective of said gold. He insisted on having a special compartment right under his bedroom floor build just for protecting the gold. Had me send the staff away for the day just so that he and I could built it in secret. And once done, he went so far as to install security measures! Some sort of trap, he said, for any thieving hands, but he would not tell me what it was. Truly a disturbing sight, seeing your lord grow paranoid..."
+	}
+	"page2_left_title"	:
+	{
+		""
+	}
+	"page2_left_body"	:
+	{
+		"10th of October, 1721"
+		""
+		"A proper priest in the house, at last! Father Grejoy Tellamo arrived by foot earlier today, seeking shelter for the night. Milord Cromwell seemed sceptical at the idea, but Lady Cromwell welcomed the priest with open arms. Good riddance, I say, this household has been without proper worship for far too long. Now, with Father Grejoy Tellamo watching over our souls, peace will no doubt come to our household."
+	}
+	"page2_right_title"	:
+	{
+		""
+	}
+	"page2_right_body"	:
+	{
+		"15th of October, 1721"
+		""
+		"Another guest in the household today, scheduled to stay for at least a week, it seems. A minor noble straight from Bridgeport, goes by the name of Henry Doyle and the title of sir. Seems to be a pleasant enough man, if a tad reserved, so I had Sarah direct him to the red room. Cromwell seems to like him well enough, so it seemed only proper. I hope that the good father won't be offended, is all..."
+	}
+	"gui_page1"	: "guis/readables/books/book_calig_carolingia_smaller.gui"
+	"gui_page2"	: "guis/readables/books/book_calig_carolingia_smaller.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+scrabbled_note_1
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		"Here, let's talk. Like this."
+		"Why? Let's just talk normally instead"
+		"No, stupid, then Gertrude would hear us. These walls aren't thick, remember?"
+		"True, I guess. So we'll just write on this instead?"
+		"Yes! I came up with it today. Now we can talk all we want and that old hag won't be able to hear us."
+		"Guess so. On the other hand, there will be hell to pay when they find out you pinched the quill."
+		"Let me worry about that. So what was all that fuss about the Conservatory key, anyway?"
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_hand_shoppinglist.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+scrabbled_note_2
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		"Oh, I just hid it. Just to give Louis something to complain about. You know how he is with that keybox of his."
+		"So where did you put it?"
+		"Not telling!"
+		"Oh, c'mon now..."
+		"I'll give you a hint: A lord needs one, a chef needs one, a family needs one."
+		"A fork?"
+		"No, silly, how would I hide a key in a fork? It's a room, you dolt!"
+		"Hey, hear that knock?"
+		"Yes. Who could it be at this hour?"
+		"Maybe it's Sir Doyle feeling lonely?"
+		"Or he wants mommy. I'll go open..."
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_hand_shoppinglist.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+toilet_sign
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		"Steam-Augmented Excrement Reclamation Facility"
+		"Lord Ernst Harold Cromwell"
+	}
+	"gui_page1"	: "guis/readables/marble_grey.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+letter_to_priest
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		"Grejoy,"
+		""
+		"Cromwell has found a funder. You know what must be done."
+		""
+		"If I do not hear from you after this, then I shall meet you in the Golden City. The Lord Builder bless you for your work."
+	}
+	"gui_page1"	: "guis/readables/scrolls/scroll_calig_mac_humaine.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+cromwells_journal
+{
+	precache
+	"num_pages"	: "5"
+	"page1_left_title"	:
+	{
+		""
+	}
+	"page1_left_body"	:
+	{
+		"23rd of December, 1720"
+		""
+		"The blueprints are finally complete! This long, dreary autum has yielded results beyond even what I expected. Such a magnificent creation, my dear Gottfried II. Just think of it: a device rivaling the proud eagles! Not by nature's crude muscle and wings, but by man's chemistry and machinery. It will soar through the skies and conquer the wilderness beyond our walls while carrying goods and passengers at a speed far surpassing that of"
+	}
+	"page1_right_title"	:
+	{
+		""
+	}
+	"page1_right_body"	:
+	{
+		"the fastest of ships. It could very well end up revolutionizing the way Man sees nature! Now all I need is to find a man to fund this project. I will get started with my family money, of course, but that will only be able to kick-start the project."
+		""
+		"4th of May, 1721"
+		""
+		"I am weary, so tired. Regina tells me not to worry, tells me that everything will be alright. She is so faithful, so loyal, my only hope in these"
+	}
+	"page2_left_title"	:
+	{
+		""
+	}
+	"page2_left_body"	:
+	{
+		"troubled times. Yet I find myself doubting even her words. I wonder if this whole project of mine was not doomed from the very start. The first of my little flying machines, Gottfried I, was nothing but a novelty. Very elaborate and pleasing for the eye, but hardly practical. How could I possibly expect this new, bombastic machine to fly? The Gottfried II was doomed from the very start. All that it has ever accomplished is to drain me of every drop of"
+	}
+	"page2_right_title"	:
+	{
+		""
+	}
+	"page2_right_body"	:
+	{
+		"wealth that my family has accumulated over the years."
+		""
+		"23rd of June, 1721"
+		""
+		"I am at the end of my rope. The family fortunes are in shambles, the servants are considering seeking employment elsewhere. Even Regina seems to have tired of me."
+		""
+		"Oh, Lord, help me in these dark times..."
+	}
+	"page3_left_title"	:
+	{
+		""
+	}
+	"page3_left_body"	:
+	{
+		"31st of August, 1721"
+		""
+		"Praise the Builder, there might just be a way out of this just yet! I had a visit from an old friend of the family, Duke Sandora Ortega, and his lovely son, Marcus."
+		""
+		"A pleasant evening altogether, if a tad sparse. I sheepishly explained to Ortega that we've had to cut back on quite a few comforts just to carry on living. He was polite enough not to ask further. Later that evening, though, we had a bit of wine up in my"
+	}
+	"page3_right_title"	:
+	{
+		""
+	}
+	"page3_right_body"	:
+	{
+		"study. Enjoyed a chat of this and that, as I showed him the model of the Gottfried II."
+		""
+		"Duke Ortega exploded, crushing the wineglass in his hand. Not at me, nor at my words, but their deeper meaning. That I was forced to poverty because people were shortsighted enough not fund this project of mine. He raged and raved for a good twenty minutes before finally calming down."
+		"And offering to fund it all. Blessed be his soul."
+	}
+	"page4_left_title"	:
+	{
+		""
+	}
+	"page4_left_body"	:
+	{
+		"16th of September, 1721"
+		""
+		"I feel as a man who has fallen through the deepest pits of hell, only to realize that the light up ahead are not those of salvation, but that of hellfire. Funding at last secured thanks to the generous contribution of Duke Ortega, I now find myself beset on all sides by thieves, hangers-on and bloody fanatics. Some blowhards of the Faith now wish for me to be burnt at the stake for the ''sin'' of crafting a craft capable of"
+	}
+	"page4_right_title"	:
+	{
+		""
+	}
+	"page4_right_body"	:
+	{
+		"sailing the skies. I live in constant fear of having some zealout break in here and murder me and my beloved Regina in our sleep. That and of some cowardly thief coming in here for either my blueprints or my hard-earned funding money. But they will not have it, I will simply not allow it."
+		""
+		"18th of October, 1721"
+		""
+		"All things considered, things are going quite well. The gold Ortega paid me has been put to good use and it looks like"
+	}
+	"page5_left_title"	:
+	{
+		""
+	}
+	"page5_left_body"	:
+	{
+		"my life's work might in fact see the light of day. As I am told, construction shall begin within the week, as soon as I provide the blueprints."
+		"In other words, I am growing quite fond of Sir Doyle's company, if only because he seems to be only restraining force against the zealous worship of Father Tellam. If only Regina would let me kick that firebrand out of my house..."
+	}
+	"page5_right_title"	:
+	{
+		""
+	}
+	"page5_right_body"	:
+	{
+		""
+	}
+	"gui_page1"	: "guis/readables/books/book_hand_jd_hand.gui"
+	"gui_page2"	: "guis/readables/books/book_hand_jd_hand.gui"
+	"gui_page3"	: "guis/readables/books/book_hand_jd_hand.gui"
+	"gui_page4"	: "guis/readables/books/book_hand_jd_hand.gui"
+	"gui_page5"	: "guis/readables/books/book_hand_jd_hand.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+note_on_conserv_door
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		""
+		""
+		""
+		""
+		"You have slain my murderer. You may now leave, provided you make good use of these blueprints."
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_calig_lotharus.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}
+
+
+plaque_note4
+{
+	precache
+	"num_pages"	: "1"
+	"page1_title"	:
+	{
+		""
+	}
+	"page1_body"	:
+	{
+		"Fellow members of the household,"
+		""
+		"Given the recent rash of criminal activity down in Bridgeport, Lady Cromwell has asked me to ensure the safety of the house's more precious paintings. As such, she has ordered me to secure the originals inside the east wing's storage room. Lady Cromwell has seen to it that they will be replaced with suitable imitations."
+		""
+		"- Housekeeper Gertrude"
+	}
+	"gui_page1"	: "guis/readables/sheets/sheet_paper_calig_carolingia.gui"
+	"snd_page_turn"	: "readable_page_turn"
+}

@@ -1,0 +1,101 @@
+entityDef atdm:invisible_head
+{
+	"inherit"	"atdm:ai_head_base"
+	"model"		"head_05"
+    "skin"      "heads/nohead"
+	"solid"		"0"		
+	"noshadows"		"1"
+
+}
+
+
+entityDef atdm:invisible_weapon
+
+{
+	"inherit"			"atdm:moveable_weapon_base"
+	"model"			"models/darkmod/weapons/mace.lwo"
+	"skin"			"weapons/light_invisible"
+	"solid"			"0"
+	"frobable"			"0"
+
+	"origin_hand_r"				"0 0 -.5" // x, height, x
+}
+
+
+
+entityDef atdm:invisible_rock
+
+{
+	"inherit"		    	"atdm:projectile_base"
+	"spawnclass"		"idProjectile"
+
+
+	"model"             	"models/darkmod/weapons/mace.lwo"
+	"skin"			"weapons/light_invisible"
+
+	"mins"       		"-1 -1 -2"
+	"maxs"       		"1 1 0"
+	"cone"       		"1"
+
+	"def_damage"		"atdm:damage_rock"
+        "has_result"		"0"      //reenable when atdm:result_projectile_rock is working
+	//"def_result"		"atdm:result_projectile_rock"
+        "active_surfaces"	""
+	"axial_dir"			"0 0 1"
+        "launchFromBarrel"	"0"
+	"health"			"0"					// amount of damage projectile can take if damaged (0 means it can't be destroyed)
+	"velocity"			"500 0 0"
+
+	"bounce"			"0"					// how much speed a projectile retains when it bounces off of objects (coefficient of restitution).  0 means no bounce.
+	"mass"			"5"
+	"gravity"			"250"				// lower gravity allows us to throw it slower and still use Doom3 targetting logic
+	"fuse"			"10"				// how long before the projectile is removed or self-detonates.  Use 0 for beam weapons (velocity == distance).
+
+	"detonate_on_fuse"	"0"					// whether projectile should detonate when it's fuse runs out
+	"detonate_on_death"	"0"					// whether projectile should detonate when it's "killed" (health runs out)
+	"detonate_on_world"	"1"					// whether projectile should detonate when it hits an obstacle
+	"detonate_on_actor"	"1"					// whether projectile should detonate when it hits a character in the game
+	"impact_damage_effect"	"0"					// whether projectile causes blood splats from characters that bleed
+	"impact_gib"		"0"					// whether projectile can gib a character or not (for example: bullets don't gib, but rockets do)
+	// TODO: Change this, for now using blackjack swing to approx sound of air over bottle neck
+	"snd_fly"			"nosound"
+	
+	// sound of shatter on impact or destroyed
+	"snd_explode"		"nosound"
+	"snd_flesh"			"nosound"
+        "snd_wood"		"nosound"
+
+	// Don't bind to object when it collides
+	"bindOnImpact"		"0"
+	"sr_type"			"-1"		// STIM_DEFAULT -> script/tdm_stim_response.script
+
+
+
+}
+
+entityDef atdm:billiard_ball
+
+{
+	"inherit"					"atdm:moveable_small_base"
+	"editor_displayFolder"		"Moveables/Misc"
+	"editor_usage"				"A billiard ball."
+	"model"						"models/billiard_ball.ase"
+	"solid"						"1"		
+	"friction" 					"0.1"
+	"bouncyness"				"0.001"
+	"frobable"					"1"
+	"is_mantleable"				"0"
+	"mass"						"1.0"
+	"snd_bounce" 				"poolball_hit"
+	"spr_object_hardness"		"hard"
+	"spr_object_size"			"medium"
+
+}
+
+entityDef atdm:ambient_head_3
+{
+"editor_displayFolder" "AI/ambient"
+"spawnclass" "idAnimated"
+
+"model" "head_01"
+}

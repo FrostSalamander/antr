@@ -1,0 +1,96 @@
+
+skin old_candle_holder
+{
+model models/darkmod/lights/extinguishable/wallcandles1_w_candles.lwo
+
+old_candle_holder
+}
+
+
+skin banner_faded
+{
+model models/darkmod/decorative/wall/banner1.lwo
+model models/darkmod/decorative/wall/banner2.lwo
+
+banner01 banner01_faded
+
+}
+
+
+skin old_cream_dchair
+{
+
+model models/darkmod/furniture/seating/dchair2.lwo
+
+diningchair2_s old_chair_white
+}
+
+
+
+skin weapons/light_invisible
+{
+model models/darkmod/weapons/battleaxe_ornate.lwo
+model models/darkmod/weapons/morningstar_ornate.lwo
+model models/darkmod/weapons/battleaxe.lwo
+model models/darkmod/dungeon/spiked_ball.lwo
+model models/darkmod/weapons/mace.lwo
+model models/darkmod/weapons/mace_ornate.lwo
+model models/darkmod/weapons/handaxe_ornate.lwo
+model models/darkmod/weapons/halberd.lwo
+model models/darkmod/weapons/spear.lwo
+model models/darkmod/weapons/spear2.lwo
+model models/darkmod/weapons/longsword02.lwo
+model models/darkmod/weapons/hammer02.lwo
+model models/darkmod/weapons/hammer_ornate.lwo
+model models/darkmod/weapons/gladius_in_scabbard.lwo
+model models/darkmod/weapons/gladius_scabbard.lwo
+
+tdm_handle_steel_dark textures/common/nodraw
+tdm_handle_flourish_dark textures/common/nodraw
+tdm_design_weapon_dark textures/common/nodraw
+tdm_steel_dark textures/common/nodraw
+
+
+}
+
+
+skin statue_white_stone
+{
+	model models/darkmod/decorative/statues/statue_noblewoman01.lwo
+	model models/darkmod/decorative/statues/statue_torch_left.ase
+	model models/darkmod/decorative/statues/gargoyle_fetus_pose.ase
+	model models/darkmod/decorative/statues/statue_inquisitor01.lwo
+	model models/darkmod/decorative/statues/statue_priest_pointing.lwo
+
+	textures/darkmod/stone/natural/dark_dirty textures/darkmod/stone/flat/stonewall_flat
+}
+
+
+skin statue_folded_hands_white_stone
+{
+	model models/darkmod/decorative/statues/statue_folded_hands_large.ase
+	model models/darkmod/decorative/statues/statue_folded_hands_medium.ase
+	model models/darkmod/decorative/statues/statue_folded_hands_sml.ase
+
+	statue_folded_hands	statue_folded_hands_white_stone
+}
+
+
+skin statue_open_hands2_white_stone
+{
+	model models/darkmod/decorative/statues/statue_open_hands2_huge.ase
+	model models/darkmod/decorative/statues/statue_open_hands2_large.ase
+	model models/darkmod/decorative/statues/statue_open_hands2_medium.ase
+	model models/darkmod/decorative/statues/statue_open_hands2_small.ase
+
+	statue_open_hands2 statue_folded_hands_white_stone
+}
+
+
+skin gargoyle_white_stone
+{
+	model models/darkmod/decorative/statues/statue_gargoyle.ase
+	model models/darkmod/decorative/statues/statue_gargoyle_medium.ase
+	model models/darkmod/decorative/statues/statue_gargoyle_small.ase
+	gargoyle	gargoyle_white_stone
+}

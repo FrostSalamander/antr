@@ -1,0 +1,38 @@
+maps/antr/mission_briefing
+{
+"num_pages": "3"
+
+"page1_body" :
+{
+"Diary entry, 20th of October, 1721"
+""
+"Say one thing about Sir Henry Doyle, say he's a taffing idiot. Yes, I admit that. Only a taffing idiot would try to rob Lord taffing Cromwell, much less do it while being his honoured guest. I came out here to enjoy the quiet countryside and to study under the great inventor so that I could forget about all the troubles back in Bridgeport. But I suppose they didn't forget about me, nor did the Lady Terevaine. She must've found out I was staying at Cromwell's estate somehow, seeing as she had a letter delivered to me right in the middle of supper. Could barely keep a straight face as I read it. The nerve of that woman... Thankfully, my fellow guest at the mansion, Father Tellam,"
+}
+
+
+"page2_body" :
+{
+"had another heated argument with Cromwell about the whole Gottfried II project. Called it a great sin against the Builder and all that. Ironic, considering what Lady Terevaine wrote to me, but it did give me the perfect excuse to retire for the night. Still, it seems I have yet another job to do for this little shrew. And like always, she promises that this one will be the last of them before she finally helps me with my debts. For the life of me, I will never understand what she gets out of these oddjobs, but I suspect it might just be some form of deranged joy at seeing me stumble around robbing everyone I know. And this time, she wants me to steal Lord Cromwell's very passion, the blueprints for his beloved airship."
+}
+
+
+
+"page3_body" :
+{
+"That in itself will not be a hard task, given that Cromwell doesn't allow any guards indoors. From what he has told me, I suspect the blueprints to be in his study on the second floor of the east wing. I'll need to be careful, however. Cromwell is a dangerous man and should my hand in this be known, he will make my money problems seem like a pleasant afternoon stroll. I'll need to mask this theft as a robbery, so I should try and steal as much as I can, perhaps smash a window or two along the way. With any luck, I'll find enough goods to actually pay my debts and get free of that taffing Lady Terevaine..."
+}
+
+
+"page4_body" :
+{
+""
+}
+
+
+"page5_body" :
+{
+""
+}
+
+}
+

@@ -1,0 +1,13 @@
+
+skin heads/nohead
+{
+	model models/md5/chars/heads/npcs/commoner_head05.md5mesh
+
+	models/md5/chars/guards/citywatch/citywatchhead textures/common/nodraw
+	tdm_teeth textures/common/nodraw
+	tdm_character_tongue textures/common/nodraw
+	textures/common/shadow textures/common/nodraw
+	models/md5/chars/heads/npcs/commoner_head04_back textures/common/nodraw
+	models/md5/chars/nobles/nobleman1/nobleman_head1_dark textures/common/nodraw
+	long_hair01_light textures/common/nodraw
+}

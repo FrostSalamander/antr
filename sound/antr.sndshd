@@ -1,0 +1,47 @@
+ghost_sound
+{
+volume 10
+sound\antr\ghost1.ogg
+}
+
+
+running_thief
+{
+volume 10
+sound\antr\running_thief.ogg
+}
+
+
+spooky_hit_4
+{
+volume 10
+sound\antr\spooky_hit_4.ogg
+}
+
+
+piano_tune
+{
+volume 10
+sound\antr\piano_tune.ogg
+}
+
+
+freezer_open
+{
+volume 10
+sound\antr\freezer_open.ogg
+}
+
+
+door_squeek
+{
+volume 10
+sound\antr\door_squeak.ogg
+}
+
+//www.freesoundeffects.com//
+poolball_hit  
+{
+volume 10
+sound\antr\poolball_hit
+}
