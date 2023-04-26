@@ -1,5 +1,5 @@
 Title: A Night To Remember
 Description: Steal blueprints for an airship
 Author: Fieldmedic
-Version: 2
+Version: [VERSION]
 Required TDM Version: 2.06
