@@ -1,13 +1,10 @@
 DarkRadiant Map Information File Version 2
 {
-	SelectionSets
-	{
-	}
 	MapProperties
 	{
-		KeyValue { "EditTimeInSeconds" "7499" } 
-		KeyValue { "LastCameraAngle" "-14.4 351.6 0" } 
-		KeyValue { "LastCameraPosition" "6426.62 -1674.61 -1161.4" } 
+		KeyValue { "EditTimeInSeconds" "7797" } 
+		KeyValue { "LastCameraAngle" "-3.6 94.5 0" } 
+		KeyValue { "LastCameraPosition" "6346.72 -2154.06 -1373.98" } 
 		KeyValue { "LastShaderClipboardMaterial" "textures/common/caulk" } 
 		KeyValue { "MapAngle1" "14.7001 87.8977 0" } 
 		KeyValue { "MapAngle2" "2.10002 84.5976 0" } 
@@ -30,7 +27,7 @@ DarkRadiant Map Information File Version 2
 	}
 	MapEditTimings
 	{
-		TotalSecondsEdited { 7499 }
+		TotalSecondsEdited { 7797 }
 	}
 	SelectionGroups
 	{
@@ -11096,15 +11093,11 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (func_emitter_156)
 		Node { 0 } // entity (func_emitter_151)
 		Node { 0 } // entity (light_136)
-		Node { 0 } // entity (func_emitter_153)
-		Node { 0 } // entity (func_emitter_154)
 		Node { 0 } // entity (func_static_1413)
 		Node { 0 } // entity (func_static_1415)
 		Node { 0 } // entity (func_emitter_160)
-		Node { 0 } // entity (func_emitter_155)
 		Node { 0 } // entity (light_143)
 		Node { 0 } // entity (func_emitter_157)
-		Node { 0 } // entity (func_emitter_158)
 		Node { 0 } // entity (speaker_5)
 		Node { 0 } // entity (mat)
 		Node { 0 } // brush (Brush)
@@ -11149,9 +11142,7 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (atdm_lamp_desk_8)
 		Node { 0 } // entity (func_static_1419)
 		Node { 0 } // entity (func_emitter_164)
-		Node { 0 } // entity (func_emitter_159)
 		Node { 0 } // entity (func_emitter_161)
-		Node { 0 } // entity (func_emitter_162)
 		Node { 0 } // entity (light_35)
 		Node { 0 } // entity (bed_table_1_upper_frob_control8)
 		Node { 0 } // brush (Brush)
@@ -11198,9 +11189,7 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (speaker_freezer_operate)
 		Node { 0 } // entity (freezer_chain)
 		Node { 0 } // entity (func_emitter_168)
-		Node { 0 } // entity (func_emitter_163)
 		Node { 0 } // entity (func_emitter_165)
-		Node { 0 } // entity (func_emitter_166)
 		Node { 0 } // entity (func_static_1449)
 		Node { 0 } // entity (light_130)
 		Node { 0 } // entity (game_corridor_ambient_light)
@@ -11902,5 +11891,8 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (info_locationSeparator_2)
 		Node { 0 } // entity (info_locationSeparator_3)
 		Node { 0 } // entity (info_locationSeparator_4)
+	}
+	SelectionSets
+	{
 	}
 }
