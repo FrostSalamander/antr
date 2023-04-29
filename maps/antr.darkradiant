@@ -2,9 +2,9 @@ DarkRadiant Map Information File Version 2
 {
 	MapProperties
 	{
-		KeyValue { "EditTimeInSeconds" "7797" } 
-		KeyValue { "LastCameraAngle" "-3.6 94.5 0" } 
-		KeyValue { "LastCameraPosition" "6346.72 -2154.06 -1373.98" } 
+		KeyValue { "EditTimeInSeconds" "9167" } 
+		KeyValue { "LastCameraAngle" "-14.7 2.99998 0" } 
+		KeyValue { "LastCameraPosition" "6404.57 -1682.74 -1151.72" } 
 		KeyValue { "LastShaderClipboardMaterial" "textures/common/caulk" } 
 		KeyValue { "MapAngle1" "14.7001 87.8977 0" } 
 		KeyValue { "MapAngle2" "2.10002 84.5976 0" } 
@@ -25,15 +25,18 @@ DarkRadiant Map Information File Version 2
 		KeyValue { "MapPosition8" "976 424 320" } 
 		KeyValue { "MapPosition9" "409.146 547.464 392.83" } 
 	}
-	MapEditTimings
+	SelectionSets
 	{
-		TotalSecondsEdited { 7797 }
 	}
 	SelectionGroups
 	{
 	}
 	SelectionGroupNodeMapping
 	{
+	}
+	MapEditTimings
+	{
+		TotalSecondsEdited { 9167 }
 	}
 	Layers
 	{
@@ -4672,8 +4675,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (func_static_427)
 		Node { 0 } // patch (Patch)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (func_static_428)
-		Node { 0 } // entity (atdm_moveable_candle_default_1)
 		Node { 0 } // entity (ambient_art_room)
 		Node { 0 } // entity (ambient_trophy_room)
 		Node { 0 } // entity (func_static_434)
@@ -8344,7 +8345,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (func_static_1091)
-		Node { 0 } // entity (atdm_moveable_candle_short2_1)
 		Node { 0 } // entity (func_static_749)
 		Node { 0 } // patch (Patch)
 		Node { 0 } // patch (Patch)
@@ -8396,7 +8396,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // patch (Patch)
 		Node { 0 } // entity (func_static_1114)
 		Node { 0 } // entity (func_static_1115)
-		Node { 0 } // entity (atdm_moveable_candle_short2_3)
 		Node { 0 } // entity (bed_table_1_lower2)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
@@ -8626,7 +8625,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (func_static_1125)
-		Node { 0 } // entity (atdm_moveable_holder_small_plus_candle2_1)
 		Node { 0 } // entity (func_static_1128)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
@@ -9806,7 +9804,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // patch (Patch)
 		Node { 0 } // entity (func_static_1177)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (atdm_moveable_holder_small_plus_candle2_3)
 		Node { 0 } // entity (bed_table_1_upper6)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
@@ -9850,7 +9847,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // patch (Patch)
 		Node { 0 } // entity (func_static_1181)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (atdm_moveable_holder_small_plus_candle2_4)
 		Node { 0 } // entity (func_static_1182)
 		Node { 0 } // entity (atdm_moveable_chair_dining_2_red_1)
 		Node { 0 } // entity (func_static_1185)
@@ -9876,7 +9872,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // patch (Patch)
 		Node { 0 } // patch (Patch)
 		Node { 0 } // entity (func_static_1184)
-		Node { 0 } // entity (atdm_moveable_candle_holder_1)
 		Node { 0 } // entity (atdm_moveable_candle_skinny_short_1)
 		Node { 0 } // entity (func_static_1195)
 		Node { 0 } // patch (Patch)
@@ -9961,7 +9956,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (func_static_1204)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (atdm_moveable_holder_small_plus_candle2_5)
 		Node { 0 } // entity (func_static_1033)
 		Node { 0 } // patch (Patch)
 		Node { 0 } // patch (Patch)
@@ -10001,7 +9995,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (func_static_1203)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (atdm_moveable_holder_small_plus_candle2_6)
 		Node { 0 } // entity (func_static_1205)
 		Node { 0 } // patch (Patch)
 		Node { 0 } // patch (Patch)
@@ -10397,7 +10390,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (conservatory_key)
 		Node { 0 } // entity (func_static_1354)
 		Node { 0 } // entity (cromwells_journal)
-		Node { 0 } // entity (atdm_moveable_holder_small_plus_candle3_2)
 		Node { 0 } // entity (func_static_1355)
 		Node { 0 } // entity (func_static_1356)
 		Node { 0 } // patch (Patch)
@@ -10656,7 +10648,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (func_static_1235)
 		Node { 0 } // entity (func_static_1306)
 		Node { 0 } // entity (atdm_loot_painting_large_1)
-		Node { 0 } // entity (atdm_moveable_holder_small_plus_candle3_1)
 		Node { 0 } // entity (atdm_loot_coinstack_medium_1)
 		Node { 0 } // entity (atdm_loot_coinstack_medium_3)
 		Node { 0 } // entity (atdm_loot_coinstack_small_1)
@@ -11425,7 +11416,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (ghost_servant_quarters)
 		Node { 0 } // entity (butler)
 		Node { 0 } // entity (speaker_nature_5)
-		Node { 0 } // entity (atdm_moveable_holder_round_plus_candle_1)
 		Node { 0 } // entity (func_static_1238)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (func_static_1241)
@@ -11641,7 +11631,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (light_156)
 		Node { 0 } // entity (atdm_lamp_electric_fancy_lit_21)
 		Node { 0 } // entity (light_157)
-		Node { 0 } // entity (atdm_moveable_holder_round_plus_candle_2)
 		Node { 0 } // entity (atdm_lamp_electric_fancy_lit_22)
 		Node { 0 } // entity (light_161)
 		Node { 0 } // entity (atdm_lamp_electric_fancy_lit_23)
@@ -11726,7 +11715,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (light_sq_6)
 		Node { 0 } // entity (lamp_sq_7)
 		Node { 0 } // entity (func_static_924)
-		Node { 0 } // entity (atdm_moveable_holder_round_plus_candle_3)
 		Node { 0 } // entity (atdm_lamp_electric_fancy_lit_31)
 		Node { 0 } // entity (light_170)
 		Node { 0 } // entity (atdm_lamp_electric_fancy_lit_32)
@@ -11734,21 +11722,16 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (func_static_1228)
 		Node { 0 } // entity (func_static_1277)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (atdm_moveable_holder_round_plus_candle_4)
 		Node { 0 } // entity (func_static_1479)
 		Node { 0 } // patch (Patch)
 		Node { 0 } // entity (func_static_1480)
-		Node { 0 } // entity (atdm_moveable_holder_round_plus_candle_5)
 		Node { 0 } // entity (func_static_1481)
 		Node { 0 } // entity (func_static_1482)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (atdm_moveable_holder_round_plus_candle_6)
 		Node { 0 } // entity (func_static_1483)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (atdm_moveable_holder_round_plus_candle_7)
 		Node { 0 } // entity (func_static_1484)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (atdm_moveable_holder_round_plus_candle_8)
 		Node { 0 } // entity (func_static_1359)
 		Node { 0 } // entity (atdm_lamp_oil_wall_hanging_lit_3)
 		Node { 0 } // entity (func_static_1271)
@@ -11765,7 +11748,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // brush (Brush)
-		Node { 0 } // entity (atdm_moveable_holder_round_plus_candle_9)
 		Node { 0 } // entity (func_static_1490)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (atdm_moveable_candle_tall3_unlit_1)
@@ -11812,7 +11794,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (func_static_1497)
 		Node { 0 } // entity (func_static_1498)
 		Node { 0 } // brush (Brush)
-		Node { 0 } // entity (atdm_moveable_holder_round_plus_candle_10)
 		Node { 0 } // entity (atdm_lamp_electric_fancy_lit_33)
 		Node { 0 } // entity (light_174)
 		Node { 0 } // entity (atdm_animated_tree_01_9)
@@ -11891,8 +11872,26 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (info_locationSeparator_2)
 		Node { 0 } // entity (info_locationSeparator_3)
 		Node { 0 } // entity (info_locationSeparator_4)
-	}
-	SelectionSets
-	{
+		Node { 0 } // entity (otdm_candle_holder_short_1)
+		Node { 0 } // entity (otdm_candle_holder_short_2)
+		Node { 0 } // entity (otdm_candle_holder_short_3)
+		Node { 0 } // entity (otdm_candle_short_1)
+		Node { 0 } // entity (otdm_candle_short_2)
+		Node { 0 } // entity (otdm_candle_holder_small_1)
+		Node { 0 } // entity (otdm_candle_holder_small_2)
+		Node { 0 } // entity (otdm_candle_holder_short_4)
+		Node { 0 } // entity (otdm_candle_holder_short_5)
+		Node { 0 } // entity (otdm_candle_holder_small_3)
+		Node { 0 } // entity (otdm_candle_holder_small_4)
+		Node { 0 } // entity (otdm_candle_holder_small_5)
+		Node { 0 } // entity (otdm_candle_holder_short_6)
+		Node { 0 } // entity (otdm_candle_holder_short_7)
+		Node { 0 } // entity (otdm_candle_holder_short_8)
+		Node { 0 } // entity (otdm_candle_holder_small_6)
+		Node { 0 } // entity (otdm_candle_holder_small_7)
+		Node { 0 } // entity (otdm_candle_holder_small_8)
+		Node { 0 } // entity (otdm_candle_holder_short_9)
+		Node { 0 } // entity (otdm_candle_holder_short_10)
+		Node { 0 } // entity (otdm_candle_holder_small_9)
 	}
 }
