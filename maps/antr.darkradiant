@@ -2,9 +2,9 @@ DarkRadiant Map Information File Version 2
 {
 	MapProperties
 	{
-		KeyValue { "EditTimeInSeconds" "11418" } 
-		KeyValue { "LastCameraAngle" "-9.3 154.8 0" } 
-		KeyValue { "LastCameraPosition" "6136.05 -1542.66 -1394.7" } 
+		KeyValue { "EditTimeInSeconds" "11942" } 
+		KeyValue { "LastCameraAngle" "-11.7 55.8 0" } 
+		KeyValue { "LastCameraPosition" "5918.07 -971.794 -992.921" } 
 		KeyValue { "LastShaderClipboardMaterial" "textures/common/caulk" } 
 		KeyValue { "MapAngle1" "14.7001 87.8977 0" } 
 		KeyValue { "MapAngle2" "2.10002 84.5976 0" } 
@@ -27,7 +27,10 @@ DarkRadiant Map Information File Version 2
 	}
 	MapEditTimings
 	{
-		TotalSecondsEdited { 11418 }
+		TotalSecondsEdited { 11942 }
+	}
+	SelectionSets
+	{
 	}
 	Layers
 	{
@@ -10016,10 +10019,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (func_static_1251)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (ghost_servant_quarters_sound)
-		Node { 0 } // entity (func_static_1255)
-		Node { 0 } // brush (Brush)
-		Node { 0 } // entity (func_static_1253)
-		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (light_141)
 		Node { 0 } // entity (ghost_servant_quarters_light)
 		Node { 0 } // entity (ghost_servant_quarters_path_1)
@@ -10063,8 +10062,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (func_portal_5)
 		Node { 0 } // entity (ghost_game_room_light)
-		Node { 0 } // entity (ghost_game_room_damaging_aura)
-		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (ghost_game_room_sound)
 		Node { 0 } // entity (ghost_game_room_waitfortrigger_1)
 		Node { 0 } // entity (teleport_ghost_game_room)
@@ -10279,10 +10276,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (func_static_1355)
 		Node { 0 } // entity (func_static_1356)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (ghost_fireplace_damage_aura)
-		Node { 0 } // brush (Brush)
-		Node { 0 } // entity (ghost_fireplace_killing_aura)
-		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (ghost_fireplace_light)
 		Node { 0 } // entity (ghost_fireplace_sound)
 		Node { 0 } // entity (ghost_fireplace_trigger_wait_1)
@@ -10442,10 +10435,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (letter_from_mira)
 		Node { 0 } // entity (atdm_loot_amulet_1)
 		Node { 0 } // entity (teleport_water)
-		Node { 0 } // entity (ghost_trophy_room_killing_aura)
-		Node { 0 } // brush (Brush)
-		Node { 0 } // entity (ghost_trophy_room_damaging_aura)
-		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (ghost_trophy_room_light)
 		Node { 0 } // entity (ghost_trophy_room)
 		Node { 0 } // entity (ghost_trophy_room_sound)
@@ -10752,8 +10741,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // entity (falling_painting_1_cm)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (teleport_remove_painting_1)
-		Node { 0 } // entity (ghost_game_room_killing_aura)
-		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (lights_on_sq_node)
 		Node { 0 } // brush (Brush)
 		Node { 0 } // entity (lights_off_sq_node)
@@ -11890,9 +11877,6 @@ DarkRadiant Map Information File Version 2
 	{
 	}
 	SelectionGroupNodeMapping
-	{
-	}
-	SelectionSets
 	{
 	}
 }
