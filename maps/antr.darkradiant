@@ -2,9 +2,9 @@ DarkRadiant Map Information File Version 2
 {
 	MapProperties
 	{
-		KeyValue { "EditTimeInSeconds" "11233" } 
-		KeyValue { "LastCameraAngle" "-1.5 358.2 0" } 
-		KeyValue { "LastCameraPosition" "6299.01 -1664.77 -1399.61" } 
+		KeyValue { "EditTimeInSeconds" "11418" } 
+		KeyValue { "LastCameraAngle" "-9.3 154.8 0" } 
+		KeyValue { "LastCameraPosition" "6136.05 -1542.66 -1394.7" } 
 		KeyValue { "LastShaderClipboardMaterial" "textures/common/caulk" } 
 		KeyValue { "MapAngle1" "14.7001 87.8977 0" } 
 		KeyValue { "MapAngle2" "2.10002 84.5976 0" } 
@@ -25,18 +25,9 @@ DarkRadiant Map Information File Version 2
 		KeyValue { "MapPosition8" "976 424 320" } 
 		KeyValue { "MapPosition9" "409.146 547.464 392.83" } 
 	}
-	SelectionSets
-	{
-	}
 	MapEditTimings
 	{
-		TotalSecondsEdited { 11233 }
-	}
-	SelectionGroups
-	{
-	}
-	SelectionGroupNodeMapping
-	{
+		TotalSecondsEdited { 11418 }
 	}
 	Layers
 	{
@@ -11627,7 +11618,6 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // patch (Patch)
 		Node { 0 } // entity (func_static_1484)
 		Node { 0 } // patch (Patch)
-		Node { 0 } // entity (func_static_1359)
 		Node { 0 } // entity (atdm_lamp_oil_wall_hanging_lit_3)
 		Node { 0 } // entity (func_static_1271)
 		Node { 0 } // entity (func_static_1485)
@@ -11894,5 +11884,15 @@ DarkRadiant Map Information File Version 2
 		Node { 0 } // patch (Patch)
 		Node { 0 } // patch (Patch)
 		Node { 0 } // entity (key_master)
+		Node { 0 } // entity (otdm_candle_set02_1)
+	}
+	SelectionGroups
+	{
+	}
+	SelectionGroupNodeMapping
+	{
+	}
+	SelectionSets
+	{
 	}
 }
