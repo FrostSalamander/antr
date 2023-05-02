@@ -29,6 +29,36 @@ entityDef otdm:candle_default
 	"frobable"				"1"
 	"frob_action_script"	"frob_light_holder_ext"
 }
+
+entityDef otdm:candle_set02
+{
+	"inherit"				"atdm:static_light_lit_base"
+
+	"skin_unlit"			"candle_set02_unlit"
+	"skin_lit"				"candle_set02_lit"
+	"skin"					"candle_set02_lit"
+
+	"noshadows_lit"			"1"				// turn off shadow when lit
+	"noshadows"				"0"				// unlit, so it has shadows
+	"extinguished"			"0"
+
+	// attach the non-light, so the candle can be lit by fire stims
+	"def_attach"			"light_candleflame"
+	"pos_attach"			"flame_sp"			// At the attach point called "flame"...
+	"attach_pos_name_1"		"flame_sp"			// ... which is defined here.
+	"name_attach"			"flame"			// Set a name to pass along spawnargs
+	"attach_pos_origin_1"	"0 0 0"		// Offset the flame X units in the Z direction
+	"model" 			"models/darkmod/lights/extinguishable/candle_set02.lwo"
+
+	"snd_bounce"			"tdm_impact_tiny"
+	"bouncyness"			"0.02"
+	"friction"				"0.1"
+	"scriptobject"			"tdm_light_holder"
+	
+	"frobable"				"1"
+	"frob_action_script"	"frob_light_holder_ext"
+}
+
 entityDef otdm:candle_short
 {
 	"inherit"			"atdm:static_light_lit_base"
